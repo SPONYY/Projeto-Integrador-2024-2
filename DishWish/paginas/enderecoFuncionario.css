@@ -1,0 +1,39 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: linear-gradient(#010101, #2F2F2F);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins", sans-serif; 
+
+}
+
+
+
+input[type="text"], input[type="number"], button {
+    width: 550px;  /* Define a largura dos inputs para 400px */
+    height: 45px;  /* Altura reduzida */
+    border-radius: 30px; /* Bordas mais suaves */
+    text-indent: 15px;  /* Indenta o texto */
+    padding: 0 8px;  /* Menos padding */
+    box-sizing: border-box;
+    background-color: #D9D9D9;
+    position: relative; /* Para manipular a posição do ícone de calendário */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#adress{
+    color: #FFFFFF;
+    font-size: 35px;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+}

@@ -1,0 +1,75 @@
+/* Configuração do fundo com gradiente */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: linear-gradient(#010101, #2F2F2F); /* Gradiente de fundo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+/* Estilo da mensagem de agradecimento */
+.agradecimento {
+    font-size: 35px;
+    font-weight: 200;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: #fff; /* Cor branca */
+    margin-top: 30px;
+}
+
+/* Contêiner das estrelas */
+.stars-container {
+    display: flex;
+    justify-content: space-evenly;
+    width: 768px; /* Largura total para as 5 estrelas */
+   margin-bottom: 200px;
+}
+
+/* Estilo para cada estrela */
+.star {
+    margin-top: 30px;
+    cursor: pointer;
+    font-size: 138.76px; /* Ajuste do tamanho da estrela */
+    transition: transform 0.6s ease, color 0.6s ease; /* Transição mais suave com atraso */
+    color: #FFD966; /* Cor para a estrela vazia */
+}
+
+/* Estrela com efeito de hover */
+.star:hover {
+    transform: scale(1.1); /* Aumenta um pouco o tamanho da estrela ao passar o mouse */
+}
+
+/* Estrela preenchida (ativa ou ao passar o mouse) */
+.star.filled {
+    color: #FFD700; /* Cor dourada para a estrela preenchida */
+}
+
+.star.hover {
+    color: #FFD700; /* Quando em hover, a estrela se torna dourada */
+    transition-delay: 0.3s; /* Atraso na transição de preenchimento */
+}
+
+/* Logo */
+
+.logo {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.logo img {
+   
+
+    width: 170px;
+    height:149px;
+}
+
+

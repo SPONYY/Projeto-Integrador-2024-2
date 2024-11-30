@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Conquistas.css">
+</head>
+<body>
+    <main>
+        <div class="navbar">
+            <div class="logo-container">
+                <img src="../img/logo.png" alt="Logo">
+                <p>Seja bem-vindo(a)</p>
+            </div>
+            <nav class="nav-links">
+                <p>Buscar Por:</p>
+                <a href="#">Cardápio</a>
+                <a href="PedidosMesa.html">Pedidos e Mesas</a>
+                <a href="#">Cadastrar Funcionário</a>
+                <a href="Conquistas.html">Conquistas e Desafios</a>
+            </nav>
+        </div>
+
+        <!-- Conteúdo da página -->
+        <div class="content">
+            <h1>Conquistas e Desafios</h1>
+            <h2>Nenhuma conquista ou desafio cadastrado</h2>
+        </div>
+
+        <!-- Botão Adicionar no canto inferior direito -->
+        <div class="adicionar">
+            <button id="openModal">Adicionar</button>
+        </div>
+
+        <!-- Modal Principal -->
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>Deseja cadastrar uma conquista ou desafio?</h3>
+                <div class="modal-buttons">
+                    <button class="modal-btn" onclick="openModalDesafio()">Desafio</button>
+                    <button class="modal-btn" onclick="openModalConquista()">Conquista</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal de Desafio -->
+        <div class="modal" id="modalDesafio">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">×</span>
+                <h2>Cadastro de Desafio</h2>
+                <!-- Formulário de Desafio -->
+                <div class="form-container">
+                    <input type="text" id="nomeDesafio" placeholder="Insira o nome do desafio" />
+                    <input type="text" id="requisitoDesafio" placeholder="Insira o requisito do desafio" />
+                    <input type="text" id="tipoConquista" placeholder="Insira o tipo da conquista" />
+                    <input type="number" id="quantidadePontos" placeholder="Quantidade de pontos" />
+                    
+                    <!-- Botões de ação -->
+                    <div class="form-buttons">
+                        <button class="form-btn" onclick="limparFormulario()">Limpar</button>
+                        <button class="form-btn" onclick="adicionarDesafio()">Adicionar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal de Conquista -->
+        <div class="modal" id="modalConquista">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">×</span>
+                <h2 style="color: white;">Cadastro de Conquista</h2>
+                <!-- Formulário de Conquista -->
+                <div class="form-container">
+                    <input type="text" id="nomeConquista" placeholder="Insira o nome da conquista" />
+                    <input type="text" id="requisitoConquista" placeholder="Insira o requisito da conquista" />
+                    <input type="text" id="tipoConquista" placeholder="Insira o tipo da conquista" />
+                    <input type="number" id="quantidadePontosConquista" placeholder="Quantidade de pontos" />
+                    
+                    <!-- Botões de ação -->
+                    <div class="form-buttons">
+                        <button class="form-btn" onclick="limparFormularioConquista()">Limpar</button>
+                        <button class="form-btn" onclick="adicionarConquista()">Adicionar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="modal.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcionários</title>
+    <link rel="stylesheet" href="loginfuncionario.css">
+</head>
+<body>
+    <main>
+        <p id="acesso">Digite o seu acesso</p>
+        <form>
+        
+        <input type="text" placeholder="Usuário">
+        <input type="password" placeholder="Senha">
+        <input type="submit" value="Entrar">
+    </form>
+    <a href="cadastrarfuncionario.html">Cadastrar funcionário</a>
+    <img src="../img/logo.png" alt="">
+    </main>
+</body>
+<script>
+    // Dados de usuário e senha (pode ser alterado conforme necessidade)
+    const usuarioValido = "admin"; // usuário padrão
+    const senhaValida = "1234";    // senha padrão
+
+    // Seleciona o formulário e os campos de entrada
+    const form = document.querySelector("form");
+    const inputUsuario = document.querySelector("input[type='text']");
+    const inputSenha = document.querySelector("input[type='password']");
+    
+    // Função para validar o formulário
+    form.addEventListener("submit", function(event) {
+        event.preventDefault();  // Impede o envio do formulário para manter a página carregada
+
+        // Obtém os valores inseridos pelo usuário
+        const usuario = inputUsuario.value;
+        const senha = inputSenha.value;
+
+        // Verifica se o usuário e a senha são válidos
+        if (usuario === usuarioValido && senha === senhaValida) {
+            // Redireciona para uma página após login bem-sucedido
+            alert("Login bem-sucedido!");
+            window.location.href = "homepageFuncionario.html"; // Substitua pelo URL da sua página de destino
+        } else {
+            // Exibe uma mensagem de erro se os dados estiverem incorretos
+            alert("Usuário ou senha incorretos. Tente novamente.");
+        }
+    });
+</script>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Funcionário</title>
+    <link rel="stylesheet" href="cargofuncionario.css">
+</head>
+
+<body>
+    <main>
+        <p>Cadastrar Funcionário</p>
+        <form id="formCadastro" action="homePageFuncionario.html">
+            <input type="text" id="cargo" name="cargo" placeholder="Cargo" required>
+            <input type="date" id="data_contratacao" name="data_contratacao" placeholder="Data de Contratação" required>
+            <select>
+                <option value="manha">Manhã</option>
+                <option value="tarde">Tarde</option>
+                <option value="noite">Noite</option>
+            </select>
+            <input type="number" id="salario" name="salario" placeholder="Salário" required>
+            <input type="text" id="nivel_acesso" name="nivel_acesso" placeholder="Nível de Acesso" required>
+            <input type="text" id="resposabilidades" name="responsabilidades"
+                placeholder="Responsabilidades Adicionais">
+            <textarea id="beneficios" name="beneficios" placeholder="Benefícios" required></textarea>
+            <button type="submit">Cadastrar Funcionário</button>
+        </form>
+    </main>
+</body>
+
+</html>

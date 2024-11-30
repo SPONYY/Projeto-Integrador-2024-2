@@ -1,0 +1,209 @@
+/* Corpo da página */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    height: 100vh;
+    padding-left: 250px; /* Espaço para a navbar */
+}
+main{
+    font-family: "Poppins", sans-serif;
+}
+/* Estilo da Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: #010101;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+    font-weight: 200;
+}
+
+/* Estilo do conteúdo da Navbar */
+.logo-container img {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.nav-links p {
+    font-size: 19px;
+    margin: 0;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.nav-links a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo do conteúdo da página */
+.content {
+    margin-top: 50px;
+    margin-left: 20px;
+}
+
+.content h1, .content h2 {
+    color: #333;
+    font-weight: bold;
+}
+
+/* Estilo do botão Adicionar */
+.adicionar {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
+
+.adicionar button {
+    background-color: #2F2F2F;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.adicionar button:hover {
+    background-color: #444;
+}
+
+/* Estilo do Modal */
+.modal {
+    display: none; /* Esconde o modal por padrão */
+    position: fixed;
+    z-index: 101;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro para destacar o modal */
+}
+.modal h3{
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+}
+/* Conteúdo do modal */
+.modal-content {
+   
+    background-color: #444;
+    padding: 20px;
+    border-radius: 10px;
+    justify-content: center;
+    text-align: center;
+    width: 700px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    height: 400px;
+    display: flex; /* Flexbox para o conteúdo */
+    flex-direction: column;
+    align-items: center; /* Centraliza o conteúdo */
+    justify-content: center; /* Centraliza os botões */
+}
+
+/* Botão de fechar o modal */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #888;
+}
+
+.close:hover {
+    color: #555;
+}
+
+/* Botões dentro do modal */
+.modal-buttons {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column; /* Coloca os botões em coluna */
+    align-items: center; /* Centraliza os botões */
+    justify-content: center; /* Garante que os botões fiquem centralizados */
+}
+
+/* Estilo para os botões do modal */
+.modal-btn {
+    background-color: #2F2F2F;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 10px 0; /* Espaçamento entre os botões */
+    width: 400px; /* Largura fixa para os botões */
+    height: 50px;
+}
+
+.modal-btn:hover {
+    background-color: #444;
+}
+
+/* Estilo do Formulário de Desafio */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+}
+
+.form-container input {
+    padding: 10px;
+    margin: 10px 0;
+    width: 80%;
+    border: 1px solid #ccc;
+    border-radius: 65px;
+    font-size: 16px;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    margin-top: 20px;
+}
+
+.form-buttons .form-btn {
+    background-color: #2F2F2F;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 48%; /* Botões lado a lado */
+}
+
+.form-buttons .form-btn:hover {
+    background-color: #444;
+}

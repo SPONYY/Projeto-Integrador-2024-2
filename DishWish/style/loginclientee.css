@@ -1,0 +1,108 @@
+/* Importando a fonte Poppins do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(#010101, #2F2F2F); /* Gradiente de fundo */
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    color: white; /* Texto em branco para contrastar com o fundo escuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+main {
+    text-align: center;
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#cpfusuario {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 30px; /* Aumentando o espaçamento abaixo do parágrafo */
+    margin-top: 130px;
+    width: 350px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="submit"] {
+    width: 450px;  /* Define a largura dos inputs para 450px */
+    height: 45px;  /* Altura reduzida */
+    border-radius: 30px; /* Bordas mais suaves */
+    text-indent: 15px;  /* Indenta o texto */
+    padding: 0 8px;  /* Menos padding */
+    box-sizing: border-box;
+    background-color: #D9D9D9;
+    position: relative; /* Para manipular a posição do ícone de calendário */
+    margin-bottom: 15px;  /* Adiciona espaçamento entre os inputs */
+}
+
+input[type="submit"] {
+    background-color: #FFD966; /* Cor dourada para o botão */
+    color: black;
+    cursor: pointer;
+    width: 450px; /* Largura igual ao campo de texto */
+    border-radius: 30px;
+    height: 45px; /* Mesma altura do campo de texto */
+}
+
+input[type="submit"]:hover {
+    background-color: #FFD700; /* Cor mais intensa no hover */
+}
+
+a {
+    display: block;
+    color: white;
+    font-size: 14px;
+    margin-top: 15px;  /* Aumentando o espaçamento superior */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    width: 100px;
+    margin-top: 30px;  /* Aumentando o espaçamento superior da imagem */
+}
+
+.funcionario {
+    margin-top: 30px;
+}
+
+.funcionario img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.funcionario a {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+}
+
+.funcionario a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para o botão de entrar */
+#entrar-usuario {
+    background-color: #1F1E1E;
+    color: #fff;
+}

@@ -1,0 +1,139 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cardápio - Navbar Lateral</title>
+        <link rel="stylesheet" href="homepage.css">
+        
+    </head>
+    <body>
+        <div class="navbar">
+            <div class="logo-container">
+                <a href="homepage.html">
+                </a>
+                <img src="../img/logo.png" alt="Logo">
+                <p>Seja bem-vindo(a)</p>
+           
+            </div>
+            <nav class="nav-links">
+                <p>Buscar Por:</p>
+                <a href="#">Prato Principal</a>
+                <a href="#">Aperitivos</a>
+                <a href="#">Bebidas</a>
+                <a href="#">Sobremesas</a>
+            </nav>
+        </div>
+
+        <main class="produtocontainer">
+            <h1>CARDÁPIO</h1>
+            <button id="visualizarpedido"><h2>Visualizar Pedido</h2></button>
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&larr;</span> <!-- Botão de fechar -->
+                    <div class="modal-header">
+                        <img src="../img/image5.png" alt="Produto" class="modal-img">
+                    </div>
+                    <div class="modal-details">
+                        <div class="modal-info">
+                            <h2 class="modal-nome">Nome do Produto</h2>
+                            <p class="modal-descricao">Sobre o produto</p>
+                        </div>
+                        <div class="modal-extra">
+                            <span class="modal-pontos">100 pontos</span>
+                            <span class="modal-preco">R$ 29,90</span>
+                        </div>
+                        <div class="modal-buttons">
+                            <button class="btn-personalizar">Personalizar</button>
+                            <button class="btn-adicionar">Adicionar ao carrinho</button>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+            
+            
+            <div class="produtos">
+                <div class="coluna">
+                    <div class="produtocard">
+                        <img src="../img/image5.png" alt="Produto">
+                        <div class="produtoinfo">
+                            <span class="nome-produto">Produto 1</span>
+                            <p class="descricao">Descrição do Produto</p>
+                            <div class="detalhes">
+                                <span class="pontos">100 pontos</span>
+                                <span class="preco">R$ 29,90</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="produtocard">
+                        <img src="../img/image5.png" alt="Produto">
+                        <div class="produtoinfo">
+                            <span class="nome-produto">Produto 2</span>
+                            <p class="descricao">Descrição do Produto</p>
+                            <div class="detalhes">
+                                <span class="pontos">100 pontos</span>
+                                <span class="preco">R$ 29,90</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="produtocard">
+                        <img src="../img/image5.png" alt="Produto">
+                        <div class="produtoinfo">
+                            <span class="nome-produto">Produto 3</span>
+                            <p class="descricao">Descrição do Produto</p>
+                            <div class="detalhes">
+                                <span class="pontos">100 pontos</span>
+                                <span class="preco">R$ 29,90</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="coluna">
+                    <div class="produtocard">
+                        <img src="../img/image5.png" alt="Produto">
+                        <div class="produtoinfo">
+                            <span class="nome-produto">Produto 4</span>
+                            <p class="descricao">Descrição do Produto</p>
+                            <div class="detalhes">
+                                <span class="pontos">100 pontos</span>
+                                <span class="preco">R$ 29,90</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="produtocard">
+                        <img src="../img/image5.png" alt="Produto">
+                        <div class="produtoinfo">
+                            <span class="nome-produto">Produto 5</span>
+                            <p class="descricao">Descrição do Produto</p>
+                            <div class="detalhes">
+                                <span class="pontos">100 pontos</span>
+                                <span class="preco">R$ 29,90</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="produtocard">
+                        <img src="../img/image5.png" alt="Produto">
+                        <div class="produtoinfo">
+                            <span class="nome-produto">Produto 6</span>
+                            <p class="descricao">Descrição do Produto</p>
+                            <div class="detalhes">
+                                <span class="pontos">100 pontos</span>
+                                <span class="preco">R$ 29,90</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                </div>
+            </div>
+            <div class="finalizarPedido">
+                <a href="avaliacao.html">
+                    <button id="finalizarpedido"><h2>Finalizar Pedido</h2></button>
+                </a>
+                
+                
+            </div>
+        </main>
+        <script src="homepage.js"></script>
+    </body>
+    </html>
