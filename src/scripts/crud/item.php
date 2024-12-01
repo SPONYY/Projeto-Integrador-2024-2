@@ -74,12 +74,24 @@ class Item {
         return false;
     }
 
-    // READ
-    public function read($id) {
-        $stmt = $this->pdo->prepare("SELECT * FROM colaboradores WHERE id = :id");
-        $stmt->execute(['id' => $id]);
-        return $stmt->fetch(PDO::FETCH_ASSOC);
+ 
+// Read All (PDO)
+public function readAll() {
+    $query = "SELECT descricao, descricao_abreviada, preco_venda, imagem_prato FROM itens";
+    $stmt = $this->conn->prepare($query);
+    $stmt->execute();
+    
+    // Verifica se há resultados
+    if ($stmt->rowCount() > 0) {
+        $itens = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        // Retorna os dados no formato JSON
+        return json_encode($itens);
+    } else {
+        return json_encode([]);
     }
+}
+
+
 
     // UPDATE
     public function update() {
@@ -128,7 +140,7 @@ class Item {
 
     // DELETE
     public function delete($id) {
-        $stmt = $this->pdo->prepare("DELETE FROM colaboradores WHERE id = :id");
+        $stmt = $this->pdo->prepare("DELETE FROM itens WHERE id = :id");
         return $stmt->execute(['id' => $id]);
     }
 }

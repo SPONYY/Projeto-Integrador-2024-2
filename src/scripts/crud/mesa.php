@@ -37,7 +37,7 @@ class Mesa {
 
     // READ
     public function read($id) {
-        $stmt = $this->pdo->prepare("SELECT * FROM colaboradores WHERE id = :id");
+        $stmt = $this->pdo->prepare("SELECT * FROM mesas WHERE id = :id");
         $stmt->execute(['id' => $id]);
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
@@ -67,7 +67,7 @@ class Mesa {
 
     // DELETE
     public function delete($id) {
-        $stmt = $this->pdo->prepare("DELETE FROM colaboradores WHERE id = :id");
+        $stmt = $this->pdo->prepare("DELETE FROM mesas WHERE id = :id");
         return $stmt->execute(['id' => $id]);
     }
 }
