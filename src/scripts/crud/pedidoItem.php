@@ -36,7 +36,7 @@ class PedidoItem {
 
     // READ
     public function read($id) {
-        $stmt = $this->pdo->prepare("SELECT * FROM colaboradores WHERE id = :id");
+        $stmt = $this->pdo->prepare("SELECT * FROM pedido_itens WHERE id = :id");
         $stmt->execute(['id' => $id]);
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
@@ -65,7 +65,7 @@ class PedidoItem {
 
     // DELETE
     public function delete($id) {
-        $stmt = $this->pdo->prepare("DELETE FROM colaboradores WHERE id = :id");
+        $stmt = $this->pdo->prepare("DELETE FROM pedido_itens WHERE id = :id");
         return $stmt->execute(['id' => $id]);
     }
 }

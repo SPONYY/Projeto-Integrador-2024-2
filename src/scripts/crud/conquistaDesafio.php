@@ -55,7 +55,7 @@ class ConquistaDesafio {
 
     // READ
     public function read($id) {
-        $stmt = $this->pdo->prepare("SELECT * FROM colaboradores WHERE id = :id");
+        $stmt = $this->pdo->prepare("SELECT * FROM conquistas_desafios WHERE id = :id");
         $stmt->execute(['id' => $id]);
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
@@ -94,7 +94,7 @@ class ConquistaDesafio {
     
     // DELETE
     public function delete($id) {
-        $stmt = $this->pdo->prepare("DELETE FROM colaboradores WHERE id = :id");
+        $stmt = $this->pdo->prepare("DELETE FROM conquistas_desafios WHERE id = :id");
         return $stmt->execute(['id' => $id]);
     }
 }
