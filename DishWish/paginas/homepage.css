@@ -1,318 +1,266 @@
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Pragati+Narrow:wght@400;700&display=swap');
-*{
-    font-family: "Poppins", sans-serif; 
-}
-        body {
-            display: flex;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            font-family: "Poppins", sans-serif; 
-        }
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Pragati+Narrow:wght@400;700&display=swap');
 
-        .navbar {
-            width: 250px;
-            height: 100vh; /* Altura do navegador */
-            background-color:#010101;
-            color: white;
-            padding: 20px;
-            box-sizing: border-box; /* Inclui padding no cálculo de altura */
-        }
-
-        .logo-container {
-            text-align: center;
-            margin-bottom: 40px;
-        
-        }
-        button#visualizarpedido {
-            font-size: 16px;
-            background-color: #2F2F2F;
-            color: #ffffff;
-            border-radius: 35px;
-            padding: 10px 20px;
-            width: 300px;
-            text-align: center;
-            height: 60px;
-            position: fixed; /* Fixa o botão na tela */
-            top: 20px; /* Distância do topo */
-            right: 20px; /* Distância da direita */
-            z-index: 1000; /* Garante que o botão fique acima de outros elementos */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-        }
-    
-        .logo-container img {
-            width: 150px;
-            margin-bottom: 10px;
-        }
-
-        .nav-links p {
-            font-size: 19px;
-            margin: 0;
-            margin-bottom: 20px;
-            font-weight: bold;
-        }
-
-        .nav-links a {
-            display: block;
-            color: white;
-            text-decoration: none;
-            margin-bottom: 10px;
-        }
-
-        .nav-links a:hover {
-            text-decoration: underline;
-        }
-
-        .produtocontainer {
-            text-align: center;
-            padding: 20px;
-            font-family: Arial, sans-serif;
-            flex: 1;
-        }
-
-        h1 {
-            margin-bottom: 20px;
-            color: #333;
-        }
-
-        .produtos {
-            display: flex;
-            justify-content: space-around; /* Espaço uniforme entre as colunas */
-            gap: 20px; /* Espaçamento entre as colunas */
-        }
-
-        .coluna {
-            display: flex;
-            flex-direction: column;
-            gap: 20px; /* Espaçamento entre os produtos dentro da coluna */
-        }
-
-        .produtocard {
-            
-            display: flex;
-            align-items: center;
-            background-color: #2F2F2F94;
-            border-radius: 5px;
-            padding: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            width: 400px; /* Largura fixa */
-            height: 80px;
-            font-family: Arial, sans-serif;
-            text-align:justify;
-        }
-
-        .produtocard img {
-            width: 100px;
-            height: 100px;
-            margin-right: 10px;
-        }
-
-        .produtoinfo {
-            color: #ffffff;
-            display: flex;
-            flex-direction: column;
-            flex: 1;
-        }
-
-        .nome-produto {
-            font-size: 16px;
-            font-weight: 300;
-            color: #ffffff;
-        }
-
-        .descricao {
-            font-size: 14px;
-            color: #ffffff;
-            margin: 5px 0;
-        }
-
-        .detalhes {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .pontos {
-            font-size: 14px;
-            color: #ffffff;
-        }
-
-        .preco {
-            font-size: 16px;
-            font-weight: 200;
-            color: #ffffff;
-        }
-        h1 {
-            margin-bottom: 20px;
-            color: #1E1E1E;
-            text-align: left;
-            padding-left: 20px; /* Garante que o título não encoste na borda esquerda */
-            font-size: 44px;
-            font-weight: 500;
-        }
-
-
-        #finalizarpedido {
-            font-size: 16px;
-            background-color: #2F2F2F;
-            color: #ffffff;
-            border-radius: 35px;
-            padding: 10px 20px;
-            width: 300px;
-            height: 60px;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            cursor: pointer;
-            align-items: center;
-            position: fixed; /* Fixa o botão na tela */
-            bottom: 20px; /* Distância do fundo */
-            right: 20px; /* Distância da direita */
-            z-index: 1000; /* Garante que o botão fique acima de outros elementos */
-        }
-        
-
-        body{
-            
-                background:linear-gradient(to bottom, rgba(119, 119, 119, 1), rgba(255, 255, 255, 0.8)) 
-
-        }
-
-        /* Modal Geral */
-        /* Estilo do modal */
-    .modal {
-        display: none; /* Ocultar por padrão */
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro semi-transparente */
-        z-index: 1000; /* Garantir que esteja acima de outros elementos */
-        justify-content: center;
-        align-items: center;
-    }
-
-    /* Estilo do conteúdo do modal */
-    /* Estilo do modal */
-    .modal-content {
-        font-family: "Poppins", sans-serif; 
-        display: flex;
-        font-weight: 300;
-        flex-direction: row;
-        background-color: #f4f4f4;
-        width: 90%; /* Aumenta a largura do modal */
-        max-width: 800px; /* Define um limite máximo para largura */
-        height: 60%;
-    
-        border-radius: 10px;
-        overflow: hidden;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        position: relative;
-    }
-
-
-    /* Imagem no modal */
-    .modal-header {
-        flex: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #ffffff;
-        font-family: "Poppins", sans-serif; 
-    }
-
-    .modal-img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 5px;
-    }
-
-    /* Detalhes do modal */
-    .modal-details {
-        
-        flex: 2;
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        background-color: #777777;
-        font-weight: 300;
-        font-family: "Poppins", sans-serif; 
-    }
-
-    .modal-info {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        margin-bottom: 10px;
-    
-    }
-
-    .modal-nome {
-        font-weight: 300;
-        font-size: 18px;
-        font-weight: 300;
-        margin: 0;
-        color: #ffffff;
+    /* Reset Geral */
+    * {
         font-family: "Poppins", sans-serif;
-        font-size: 28px;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow: hidden; /* Hide scrollbars */
     }
 
-    .modal-descricao {
+    /* Configurações Gerais */
+    body {
+        display: flex;
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(to bottom, rgba(119, 119, 119, 1), rgba(255, 255, 255, 0.8));
+        overflow: hidden; /* Hide scrollbars */
+    }
+
+    h1 {
+        margin-bottom: 20px;
+        color: #1E1E1E;
+        text-align: left;
+        padding-left: 20px;
+        font-size: 44px;
+        font-weight: 500;
+    }
+
+    /* Navbar */
+    .navbar {
+        width: 250px;
+        height: 100vh;
+        background-color: #010101;
+        color: white;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .logo-container {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .logo-container img {
+        width: 150px;
+        margin-bottom: 10px;
+    }
+
+    .nav-links p {
+        font-size: 19px;
+        margin-bottom: 20px;
+        font-weight: 200
+;
+    }
+
+    .nav-links a {
+        display: block;
+        color: white;
+        text-decoration: none;
+        margin-bottom: 10px;
+    }
+
+    .nav-links a:hover {
+        text-decoration: underline;
+    }
+
+    /* Container de Produtos */
+    .produtocontainer {
+        text-align: center;
+        padding: 20px;
+        flex: 1;
+    }
+
+    #produtos-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .produtocard {
+        display: flex;
+        align-items: center;
+        background-color: #2F2F2F94;
+        border-radius: 5px;
+        padding: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        width: 400px;
+        height: 80px;
+        text-align: justify;
+    }
+
+    .produtocard img {
+        width: 85px;
+        margin-right: 10px;
+    }
+
+    .produtoinfo {
+        color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    .nome-produto {
+        font-size: 16px;
+        font-weight: 300;
+        color: #ffffff;
+    }
+
+    .descricao {
         font-size: 14px;
         color: #ffffff;
         margin: 5px 0;
-        font-weight: 300;
-        font-size: 20px;
     }
 
-    .modal-extra {
+    .detalhes {
         display: flex;
         justify-content: space-between;
-        font-size: 16px;
-        margin: 20px 0;
-    }
-    .modal-pontos {
-        position: absolute; /* Permite posicionar o elemento dentro do modal */
-        top: 10px; /* Ajuste a distância do topo */
-        right: 10px; /* Ajuste a distância da direita */
-        color: #ffffff;
-        font-size: 14px; /* Tamanho do texto */
-        font-weight: 300; /* Negrito para destaque */
-        
-        padding: 5px 10px; /* Espaçamento interno */
-        border-radius: 5px; /* Bordas arredondadas */
+        align-items: center;
     }
 
-    .modal-preco {
-        font-weight: 300;
-        color: #ffffff;
-        font-family: "Poppins", sans-serif; 
-    }
-
-    /* Botões */
-    .modal-buttons {
-        display: flex;
-        justify-content: space-around;
-        gap: 10px;
-        font-family: "Poppins", sans-serif; 
-    }
-
-    .btn-personalizar {
-        background-color: #1F1E1ED1;
-        color: white;
-        border: none;
-        padding: 10px 15px;
-        border-radius: 15px;
-        cursor: pointer;
+    .pontos {
         font-size: 14px;
-        width: 230px;
-        font-family: "Poppins", sans-serif;     
+        color: #ffffff;
     }
 
+    .preco {
+        font-size: 16px;
+        font-weight: 200;
+        color: #ffffff;
+    }
+
+    /* Botões Flutuantes */
+    #visualizarpedido, 
+    #finalizarpedido {
+        font-size: 16px;
+        background-color: #2F2F2F;
+        color: #ffffff;
+        border-radius: 35px;
+        padding: 10px 20px;
+        width: 300px;
+        height: 60px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        border: none;
+        position: fixed;
+        z-index: 1000;
+    }
+
+    #visualizarpedido {
+        top: 20px;
+        right: 20px;
+    }
+
+    #finalizarpedido {
+        bottom: 20px;
+        right: 20px;
+    }
+
+    /* Modal */
+    .modal {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        max-width: 700px;
+        z-index: 1000;
+        border-radius: 10px;
+        padding: 20px;
+        color: white;
+    }
+
+    .modal-content {
+        background-color: #777777;
+        border-radius: 10px;
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+        position: relative;
+    }
+
+    .modal-img, #modal-img {
+        width: auto;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .modal-info {
+        text-align: center;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    .modal-info .nome-produto {
+        font-size: 20px;
+        font-weight: 200
+;
+        color: #fff;
+        margin-bottom: 10px;
+    }
+
+    .modal-info .descricao {
+        font-size: 16px;
+        color: #ccc;
+        margin: 10px 0;
+    }
+
+    .modal-info .detalhes {
+        display: flex;
+        justify-content: space-between;
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+    .modal-info .pontos, 
+    .modal-info .preco {
+        font-weight: 200
+;
+    }
+
+    .modal-info .preco {
+        margin-bottom: 50px;
+        color: #009933;
+    }
+
+    /* Botão Fechar no Modal */
+    .fechar {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: #000;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        cursor: pointer;
+        color: #fff;
+        border: 2px solid #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .fechar:hover {
+        background-color: #444;
+    }
+
+    /* Botões no Modal */
+    .btn-personalizar,
     .btn-adicionar {
         background-color: #1F1E1ED1;
         color: white;
@@ -321,17 +269,160 @@
         border-radius: 15px;
         cursor: pointer;
         font-size: 14px;
-        font-family: "Poppins", sans-serif; 
         width: 230px;
-    }   
-
-    /* Botão de fechar */
-    .close {
-        position: absolute;
-        left: 10px;
-        font-size: 38px;
-        cursor: pointer;
-        color: #333;
+        font-family: "Poppins", sans-serif;
+        margin-top: 10px;
     }
 
+    .botoes {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    #adicionarCarrinhoBtn {
+        position: absolute;
+        bottom: 20px; /* Fica 20px do fundo */
+        right: 20px; /* Fica 20px da borda direita */
+        background-color: #010101;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 15px;
+        cursor: pointer;
+        font-size: 14px;
+        font-family: "Poppins", sans-serif;
+        transition: background-color 0.3s;
+    }
+
+    /* Estilo para o Carrinho de Compras */
+    /* Carrinho de Compras */
+    #carrinho-container {
+        display: none;
+        position: fixed;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        width: 550px;
+        height: 100vh; /* Limita a altura do carrinho */
+        background-color: #2F2F2F; /* Cor de fundo escura */
+        color: white;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        z-index: 1000;
         
+        overflow-x: hidden; /* Evita scroll horizontal */
+    }
+
+    #fecharCarrinho {
+        font-size: 24px;
+        color: #fff;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+    /* Esconde os botões quando o carrinho estiver visível */
+    #visualizarpedido, 
+    #finalizarpedido {
+        display: block; /* Mostra os botões por padrão */
+    }
+
+    #carrinho-container.visible ~ #visualizarpedido,
+    #carrinho-container.visible ~ #finalizarpedido {
+        display: none; /* Esconde os botões quando o carrinho estiver visível */
+    }
+
+    /* Contêiner de Itens no Carrinho */
+    #itensCarrinho {
+        margin-bottom: 20px;
+        height: calc(100% - 180px); /* Ajusta a altura para garantir que os itens se ajustem sem ultrapassar */
+        
+    }
+
+    /* Estilo para os itens no carrinho */
+    .item-carrinho {
+        display: flex;
+        align-items: center;
+        background-color: #333; /* Cor de fundo mais escura para os itens do carrinho */
+        border-radius: 5px;
+        padding: 10px;
+        margin-bottom: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        
+    }
+
+    .item-carrinho img {
+        width: 50px; /* Imagem do produto com tamanho reduzido */
+        height: 50px;
+        object-fit: cover;
+        border-radius: 5px;
+        margin-right: 10px; /* Espaço entre a imagem e o texto */
+    }
+
+    .item-carrinho span {
+        color: #fff;
+        font-size: 14px;
+        margin-right: 10px; /* Espaço entre os elementos */
+    }
+
+    .item-carrinho .quantidade {
+        font-weight: 200
+;
+        color: #009933; /* Cor para destacar a quantidade */
+    }
+
+    .item-carrinho .preco-total {
+        font-weight: 200
+;
+        color: #00b300; /* Cor verde para destacar o preço total */
+        margin-left: auto; /* Para alinhar o preço à direita */
+    }
+
+    /* Estilo para o total geral e pontuação */
+    .total, .pontuacao {
+        font-size: 18px;
+        font-weight: 200;
+        color: #fff;
+        margin-top: 20px;
+        text-align: right;
+        padding-top: 10px;
+        border-top: 1px solid #444; /* Linha de separação acima do total */
+        position: relative;
+        top: 35 0px;
+    }
+
+    /* Exibição da pontuação */
+    .pontuacao {
+        color: #ffcc00; /* Cor amarela para a pontuação */
+       
+    }
+
+    /* Estilo para o botão de "Finalizar Compra" */
+   #finalizarCarrinho{
+    font-size: 16px;
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 35px;
+    padding: 10px 20px;
+   width: 200px;
+   margin-top: 120px;
+  margin-left: 325px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    border: none;
+}
+
+.finalizarCarrinho a:hover {
+    background-color: #444;
+}
+ 
+

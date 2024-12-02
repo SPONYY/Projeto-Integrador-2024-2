@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Pragati+Narrow:wght@400;700&display=swap');
+body {
+    display: flex;
+    flex-direction: column; /* Organiza conteúdo na vertical */
+    justify-content: flex-start; /* Ajusta para começar do topo */
+    align-items: center; /* Centraliza horizontalmente */
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    height: 100vh; /* Altura total da janela */
+    background: linear-gradient(180.09deg, #777777 0.08%, #FFFFFF 39.81%),
+    linear-gradient(180.09deg, #777777 0.08%, #FFFFFF 39.81%);
+
+    overflow-x: hidden; /* Remove o scroll horizontal no navegador */
+}
+
+/* Navbar fixa */
+.navbar {
+    width: 250px;
+    height: 100vh; /* Altura total da tela */
+    background-color: #010101;
+    color: white;
+    padding: 20px;
+    position: fixed; /* Fixa a navbar na tela */
+    top: 0; /* Fica no topo */
+    left: 0; /* Fica na esquerda */
+    box-sizing: border-box;
+}
+
+/* Conteúdo da navbar */
+.logo-container img {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.nav-links p {
+    font-size: 19px;
+    margin: 0;
+    margin-bottom: 20px;
+    font-weight: 200
+;
+}
+
+.nav-links a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+
+.mesastotal {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 colunas de largura igual */
+    grid-template-rows: repeat(2, 200px); /* 2 linhas de altura igual */
+    gap: 40px; /* Espaçamento entre as células */
+    margin-left: 370px; /* Espaço à esquerda para não sobrepor a navbar */
+    padding: 20px; /* Espaçamento dentro do grid */
+}   
+
+.mesas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    color: white;
+    font-size: 44px;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+
+h1 {
+    margin-top: 30px;
+    margin-left: 390px; /* Espaço após a navbar */
+    color: #333;
+    font-weight: 500;
+}

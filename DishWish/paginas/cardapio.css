@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Pragati+Narrow:wght@400;700&display=swap');
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    height: 100vh;
+    padding-left: 250px; /* Espaço para a navbar */
+    position: relative; /* Para permitir o posicionamento absoluto do formulário */
+}
+
+main {
+    font-family: "Poppins", sans-serif;
+    padding: 20px;
+}
+
+/* Estilo da Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: #010101;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+    font-weight: 200;
+}
+
+/* Estilo do conteúdo da Navbar */
+.logo-container img {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.nav-links p {
+    font-size: 19px;
+    margin: 0;
+    margin-bottom: 20px;
+    font-weight: 200;
+}
+
+.nav-links a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+
+
+.cardapio {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    flex-direction: column;
+    width: 500px;
+    justify-content: center;
+}
+
+.card {
+    display: flex; /* Certifique-se de que o card também use flexbox */
+    width: 1000px;
+    flex-direction: row;
+   background-color: grey;
+    align-items: center; /* Centraliza verticalmente o conteúdo do card */
+}
+.add-button {
+    background: none; /* Fundo transparente */
+    border: none; /* Remove bordas */
+    color: #4CAF50; /* Cor do ícone */
+    cursor: pointer; /* Cursor de mão */
+    font-size: 20px; /* Tamanho do ícone */
+    transition: color 0.3s;
+}
+
+.carrinhobutton{
+    display: flex;
+    justify-content: end;
+    
+}
+
+
+
+.add-button:hover {
+    color: #45a049; /* Cor ao passar o mouse */
+}
+
+.card-content {
+    display: flex;
+    flex-direction: row;
+    object-fit: cover;
+    gap: 150px;
+    justify-content: center;
+    align-items: center; /* Alinha verticalmente o conteúdo do card-content */
+    text-align: center;
+}
+
+.filtros{
+    width: 1000px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: antiquewhite;
+}
+
+.conta-btn{
+    display: flex;
+    justify-content: flex-end;
+    width: 1000px;
+    height: 20px;
+  
+}
+
+img.card-img{
+    background-color: grey;
+}

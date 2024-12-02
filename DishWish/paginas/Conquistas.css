@@ -1,4 +1,5 @@
-/* Corpo da página */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Pragati+Narrow:wght@400;700&display=swap');
+
 body {
     display: flex;
     flex-direction: column;
@@ -44,7 +45,7 @@ main{
     font-size: 19px;
     margin: 0;
     margin-bottom: 20px;
-    font-weight: bold;
+    font-weight: 200;
 }
 
 .nav-links a {
@@ -54,19 +55,70 @@ main{
     margin-bottom: 10px;
 }
 
+form.formularioconquistas{
+    display: flex;
+    flex-direction: row;
+    
+}
+
 .nav-links a:hover {
     text-decoration: underline;
 }
+
 
 /* Estilo do conteúdo da página */
 .content {
     margin-top: 50px;
     margin-left: 20px;
+    
 }
+
+.conquistassearch {
+    
+    display: flex; /* Para alinhar o input e o botão lado a lado */
+    justify-content: center; /* Alinha horizontalmente os itens no centro */
+    align-items: center; /* Alinha verticalmente os itens no centro */
+    gap: 10px; /* Espaço entre o input e o botão */
+    position: absolute; /* Permite posicionar os elementos com precisão */
+    top: 40px; /* Distância do topo */
+    right: 20px; /* Distância da direita */
+}
+
+.conquistassearch input[type="search"] {
+    width: 250px;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    background-color: transparent;
+    font-size: 14px;
+    outline: none;
+}
+
+.conquistassearch input[type="search"]:focus {
+    border-bottom: 2px solid #333;
+}
+
+.conquistassearch button {
+    padding: 10px 20px;
+    background-color: #2F2F2F;
+    color: white;
+    font-size: 14px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.conquistassearch button:hover {
+    background-color: #444;
+}
+
+
 
 .content h1, .content h2 {
     color: #333;
-    font-weight: bold;
+    font-weight: 500
+;
 }
 
 /* Estilo do botão Adicionar */

@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Conquistas e Desafios</title>
     <link rel="stylesheet" href="Conquistas.css">
+    
 </head>
 <body>
     <main>
+        <!-- Navbar -->
         <div class="navbar">
             <div class="logo-container">
                 <img src="../img/logo.png" alt="Logo">
@@ -15,20 +17,33 @@
             </div>
             <nav class="nav-links">
                 <p>Buscar Por:</p>
-                <a href="#">Cardápio</a>
-                <a href="PedidosMesa.html">Pedidos e Mesas</a>
-                <a href="#">Cadastrar Funcionário</a>
+                <a href="Cardapio.html">Cardápio</a>
+                <a href="PedidosMesa.html">Pedidos</a>
+                <a href="Mesas.html">Mesas</a>
+                <a href="colaborador.html">Colaboradores</a>
                 <a href="Conquistas.html">Conquistas e Desafios</a>
+                <a href="Estoque.html">Estoque</a>
+              
+                
             </nav>
-        </div>
+        </div>      
 
-        <!-- Conteúdo da página -->
+        <!-- Conteúdo Principal -->
         <div class="content">
-            <h1>Conquistas e Desafios</h1>
-            <h2>Nenhuma conquista ou desafio cadastrado</h2>
+            
+            <form class="formularioconquistas" action="">
+                
+                <h1>Conquistas e Desafios</h1>
+                <div class="conquistassearch">
+            <input type="search" placeholder="buscar item" name="pesquisar">
+            <button>Adicionar</button>
+        </div>
+        </form>
+            <h2 id="mensagemVazia">Nenhuma conquista ou desafio cadastrado</h2>
+            <div class="lista" id="listaCadastros"></div>
         </div>
 
-        <!-- Botão Adicionar no canto inferior direito -->
+        <!-- Botão Adicionar -->
         <div class="adicionar">
             <button id="openModal">Adicionar</button>
         </div>
@@ -46,18 +61,15 @@
         </div>
 
         <!-- Modal de Desafio -->
-        <div class="modal" id="modalDesafio">
+        <div id="modalDesafio" class="modal">
             <div class="modal-content">
                 <span class="close" onclick="closeModal()">×</span>
                 <h2>Cadastro de Desafio</h2>
-                <!-- Formulário de Desafio -->
                 <div class="form-container">
-                    <input type="text" id="nomeDesafio" placeholder="Insira o nome do desafio" />
-                    <input type="text" id="requisitoDesafio" placeholder="Insira o requisito do desafio" />
-                    <input type="text" id="tipoConquista" placeholder="Insira o tipo da conquista" />
-                    <input type="number" id="quantidadePontos" placeholder="Quantidade de pontos" />
-                    
-                    <!-- Botões de ação -->
+                    <input type="text" id="nomeDesafio" placeholder="Insira o nome do desafio">
+                    <input type="text" id="requisitoDesafio" placeholder="Insira o requisito do desafio">
+                    <input type="text" id="tipoConquista" placeholder="Insira o tipo da conquista">
+                    <input type="number" id="quantidadePontos" placeholder="Quantidade de pontos">
                     <div class="form-buttons">
                         <button class="form-btn" onclick="limparFormulario()">Limpar</button>
                         <button class="form-btn" onclick="adicionarDesafio()">Adicionar</button>
@@ -67,18 +79,15 @@
         </div>
 
         <!-- Modal de Conquista -->
-        <div class="modal" id="modalConquista">
+        <div id="modalConquista" class="modal">
             <div class="modal-content">
                 <span class="close" onclick="closeModal()">×</span>
-                <h2 style="color: white;">Cadastro de Conquista</h2>
-                <!-- Formulário de Conquista -->
+                <h2>Cadastro de Conquista</h2>
                 <div class="form-container">
-                    <input type="text" id="nomeConquista" placeholder="Insira o nome da conquista" />
-                    <input type="text" id="requisitoConquista" placeholder="Insira o requisito da conquista" />
-                    <input type="text" id="tipoConquista" placeholder="Insira o tipo da conquista" />
-                    <input type="number" id="quantidadePontosConquista" placeholder="Quantidade de pontos" />
-                    
-                    <!-- Botões de ação -->
+                    <input type="text" id="nomeConquista" placeholder="Insira o nome da conquista">
+                    <input type="text" id="requisitoConquista" placeholder="Insira o requisito da conquista">
+                    <input type="text" id="tipoConquista" placeholder="Insira o tipo da conquista">
+                    <input type="number" id="quantidadePontosConquista" placeholder="Quantidade de pontos">
                     <div class="form-buttons">
                         <button class="form-btn" onclick="limparFormularioConquista()">Limpar</button>
                         <button class="form-btn" onclick="adicionarConquista()">Adicionar</button>
@@ -86,9 +95,9 @@
                 </div>
             </div>
         </div>
-
     </main>
 
-    <script src="modal.js"></script>
+    <!-- JavaScript -->
+   <script src="/DishWish/paginas/modal.js"></script>
 </body>
 </html>
