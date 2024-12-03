@@ -234,7 +234,7 @@
 
     .modal-info .preco {
         margin-bottom: 50px;
-        color: #009933;
+        color: #fff
     }
 
     /* Botão Fechar no Modal */
@@ -380,7 +380,7 @@
     .item-carrinho .preco-total {
         font-weight: 200
 ;
-        color: #00b300; /* Cor verde para destacar o preço total */
+        color: #fff; /* Cor verde para destacar o preço total */
         margin-left: auto; /* Para alinhar o preço à direita */
     }
 

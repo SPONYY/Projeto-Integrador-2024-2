@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conquistas e Desafios</title>
     <link rel="stylesheet" href="Conquistas.css">
-    
 </head>
 <body>
     <main>
@@ -22,30 +21,22 @@
                 <a href="Mesas.html">Mesas</a>
                 <a href="colaborador.html">Colaboradores</a>
                 <a href="Conquistas.html">Conquistas e Desafios</a>
-                <a href="#">Estoque</a>
-              
-                
+                <a href="Estoque.html">Estoque</a>
+
             </nav>
-        </div>   
+        </div>
 
         <!-- Conteúdo Principal -->
         <div class="content">
-            
-            <form class="formularioconquistas" action="">
-                
+            <form class="formularioconquistas">
                 <h1>Conquistas e Desafios</h1>
                 <div class="conquistassearch">
-            <input type="search" placeholder="buscar item" name="pesquisar">
-            <button>Adicionar</button>
-        </div>
-        </form>
+                    <input type="search" placeholder="Buscar item" name="pesquisar">
+                    <button type="button" id="openModal">Adicionar</button>
+                </div>
+            </form>
             <h2 id="mensagemVazia">Nenhuma conquista ou desafio cadastrado</h2>
             <div class="lista" id="listaCadastros"></div>
-        </div>
-
-        <!-- Botão Adicionar -->
-        <div class="adicionar">
-            <button id="openModal">Adicionar</button>
         </div>
 
         <!-- Modal Principal -->
@@ -68,8 +59,8 @@
                 <div class="form-container">
                     <input type="text" id="nomeDesafio" placeholder="Insira o nome do desafio">
                     <input type="text" id="requisitoDesafio" placeholder="Insira o requisito do desafio">
-                    <input type="text" id="tipoConquista" placeholder="Insira o tipo da conquista">
-                    <input type="number" id="quantidadePontos" placeholder="Quantidade de pontos">
+                    <input type="text" id="tipoConquistaDesafio" placeholder="Insira o tipo do desafio">
+                    <input type="number" id="quantidadePontosDesafio" placeholder="Quantidade de pontos">
                     <div class="form-buttons">
                         <button class="form-btn" onclick="limparFormulario()">Limpar</button>
                         <button class="form-btn" onclick="adicionarDesafio()">Adicionar</button>
@@ -97,7 +88,6 @@
         </div>
     </main>
 
-    <!-- JavaScript -->
-   <script src="/DishWish/paginas/modal.js"></script>
+    <script src="modal.js"></script>
 </body>
 </html>
