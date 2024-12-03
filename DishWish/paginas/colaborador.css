@@ -17,6 +17,30 @@ main {
     padding: 20px;
 }
 
+main table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+main th, main td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+main th {
+    background-color: #f4f4f4;
+}
+
+main tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+main tr:hover {
+    background-color: #eaeaea;
+}
+
 /* Estilo da Navbar */
 .navbar {
     position: fixed;
@@ -104,14 +128,4 @@ main {
     left: 10px; /* Posiciona o ícone dentro do input */
     transform: translateY(-50%); /* Centraliza verticalmente */
     color: #010101; /* Cor do ícone */
-}
-
-button{
-    height: 45px;
-    font-family: "Poppins", sans-serif;
-    background-color: rgba(42, 41, 41, 1);
-    color: #fff;
-    border: none;
-    border-radius: 25px;
-    width: 105px;
 }

@@ -30,6 +30,27 @@ main{
     font-weight: 200;
 }
 
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px;
+  }
+  th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+  th {
+    background-color: #f4f4f4;
+  }
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  tr:hover {
+    background-color: #eaeaea;
+  }
+
+
 /* Estilo do conteúdo da Navbar */
 .logo-container img {
     width: 150px;
@@ -262,60 +283,4 @@ form.formularioconquistas{
 
 .form-buttons .form-btn:hover {
     background-color: #444;
-}
-
-/* Estilos Gerais dos Cards */
-.card {
-    background-color: #f8f9fa; /* Cor de fundo suave */
-    border-radius: 10px; /* Bordas arredondadas */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave para destacar os cards */
-    padding: 20px; /* Espaçamento interno */
-    margin: 10px 0; /* Margem entre os cards */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efeito de transição suave */
-}
-
-/* Efeito de hover nos cards (ao passar o mouse) */
-.card:hover {
-    transform: translateY(-5px); /* Eleva o card ligeiramente */
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); /* Sombra mais intensa */
-}
-
-/* Títulos dos Cards (Desafio e Conquista) */
-.card h3 {
-    font-size: 1.5em;
-    color: #007bff; /* Cor azul para o título */
-    margin-bottom: 10px; /* Espaçamento abaixo do título */
-}
-
-/* Estilos para os detalhes dos cards */
-.card p {
-    font-size: 1em;
-    color: #333; /* Texto mais escuro para leitura */
-    margin-bottom: 8px; /* Espaçamento entre os parágrafos */
-}
-
-/* Estilos Específicos para Cards de Desafio */
-.card-desafio {
-    border-left: 5px solid #28a745; /* Borda verde para destacar desafios */
-}
-
-/* Estilos Específicos para Cards de Conquista */
-.card-conquista {
-    border-left: 5px solid #ffc107; /* Borda amarela para destacar conquistas */
-}
-
-/* Estilo da lista de cadastros */
-#listaCadastros {
-    display: flex;
-    flex-direction: column; /* Exibe os cards em uma coluna */
-    align-items: flex-start;
-    margin-top: 20px;
-}
-
-/* Mensagem de lista vazia */
-#mensagemVazia {
-    color: #aaa;
-    font-size: 1.2em;
-    text-align: center;
-    margin-top: 20px;
 }

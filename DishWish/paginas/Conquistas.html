@@ -35,9 +35,40 @@
                     <button type="button" id="openModal">Adicionar</button>
                 </div>
             </form>
-            <h2 id="mensagemVazia">Nenhuma conquista ou desafio cadastrado</h2>
+            
             <div class="lista" id="listaCadastros"></div>
         </div>
+
+        <table border="1">
+            <thead>
+              <tr>
+                <th>Nome da Conquista</th>
+                <th>Requisito</th>
+                <th>Tipo</th>
+                <th>Quantidade de Pontos</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Número de pedidos alcançado</td>
+                <td>10 pedidos</td>
+                <td>Número de pedidos</td>
+                <td>50 pontos</td>
+              </tr>
+              <tr>
+                <td>Número de pedidos alcançado</td>
+                <td>20 pedidos</td>
+                <td>Número de pedidos</td>
+                <td>100 pontos</td>
+              </tr>
+              <tr>
+                <td>Número de pedidos alcançado</td>
+                <td>35 pedidos</td>
+                <td>Número de pedidos</td>
+                <td>200 pontos</td>
+              </tr>
+            </tbody>
+          </table>
 
         <!-- Modal Principal -->
         <div id="myModal" class="modal">
@@ -59,17 +90,15 @@
                 <div class="form-container">
                     <input type="text" id="nomeDesafio" placeholder="Insira o nome do desafio">
                     <input type="text" id="requisitoDesafio" placeholder="Insira o requisito do desafio">
-                    <input type="text" id="tipoDesafio" placeholder="Insira o tipo do desafio">
+                    <input type="text" id="tipoConquistaDesafio" placeholder="Insira o tipo do desafio">
                     <input type="number" id="quantidadePontosDesafio" placeholder="Quantidade de pontos">
                     <div class="form-buttons">
-                        <button class="form-btn" onclick="limparFormularioDesafio()">Limpar</button>
+                        <button class="form-btn" onclick="limparFormulario()">Limpar</button>
                         <button class="form-btn" onclick="adicionarDesafio()">Adicionar</button>
-
                     </div>
                 </div>
             </div>
         </div>
-        
 
         <!-- Modal de Conquista -->
         <div id="modalConquista" class="modal">
@@ -88,7 +117,6 @@
                 </div>
             </div>
         </div>
-        
     </main>
 
     <script src="modal.js"></script>
