@@ -39,6 +39,6 @@ const stars = document.querySelectorAll('.star');
         stars.forEach(star => {
             star.addEventListener('click', () => {
                 // Quando uma estrela for clicada, redireciona para a homepage
-                window.location.href = 'homepage.html';
+                window.location.href = 'logincliente.html';
             });
         });
