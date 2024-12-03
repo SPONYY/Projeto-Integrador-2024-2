@@ -1,0 +1,571 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Pragati+Narrow:wght@400;700&display=swap');
+
+/* Reset Geral */
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden; /* Hide scrollbars */
+}
+
+/* Configurações Gerais */
+body {
+    display: flex;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(to bottom, rgba(119, 119, 119, 1), rgba(255, 255, 255, 0.8));
+    overflow: hidden; /* Hide scrollbars */
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #1E1E1E;
+    text-align: left;
+    padding-left: 20px;
+    font-size: 44px;
+    font-weight: 500;
+}
+
+/* Navbar */
+.navbar {
+    width: 250px;
+    height: 100vh;
+    background-color: #010101;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    font-weight: 200;
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.logo-container img {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+.nav-links p {
+    font-size: 19px;
+    margin-bottom: 20px;
+    font-weight: 200
+;
+}
+
+.nav-links a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Container de Produtos */
+.produtocontainer {
+    text-align: center;
+    padding: 20px;
+    flex: 1;
+}
+
+#produtos-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.produtocard {
+    display: flex;
+    align-items: center;
+    background-color: #2F2F2F94;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    height: 100px;
+    text-align: justify;
+}
+
+.produtocard img {
+    width: 85px;
+    margin-right: 10px;
+}
+
+.produtoinfo {
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.nome-produto {
+    font-size: 16px;
+    font-weight: 300;
+    color: #ffffff;
+    text-align: justify;
+}
+
+.descricao {
+    font-size: 14px;
+    color: #ffffff;
+    margin: 5px 0;
+    text-align: justify;
+}
+
+.detalhes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pontos {
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.preco {
+    font-size: 16px;
+    font-weight: 200;
+    color: #ffffff;
+}
+
+/* Botões Flutuantes */
+#visualizarpedido, 
+#finalizarpedido {
+    font-size: 16px;
+    background-color: #2F2F2F;
+    color: #ffffff;
+    border-radius: 35px;
+    padding: 10px 20px;
+    width: 300px;
+    height: 60px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    position: fixed;
+    z-index: 1000;
+}
+
+#visualizarpedido {
+    top: 20px;
+    right: 20px;
+}
+
+#finalizarpedido {
+    bottom: 20px;
+    right: 20px;
+}
+
+/* Modal */
+/* Modal - Estilo */
+/* Modal */
+.modal {
+    display: none; /* Inicialmente escondido */
+    position: fixed;
+    z-index: 1; /* Fica sobre outros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.73) 20.76%, rgba(31, 30, 30, 0.73) 67.83%);
+
+}
+
+/* Conteúdo do modal */
+.modal-content {
+   background: linear-gradient(180deg, rgba(0, 0, 0, 0.73) 20.76%, rgba(31, 30, 30, 0.73) 67.83%);
+    color: #fff;;
+    margin: 10% auto; /* Diminuímos a margem para centralizar mais perto */
+    padding: 15px; /* Menos padding para reduzir o tamanho */
+    border-radius: 8px;
+    width: 400px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Botão de fechar */
+.close {
+    color: #aaa;
+    font-size: 24px; /* Menor tamanho para o X */
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Muda a cor do X quando passar o mouse por cima */
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.product-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-info {
+    margin-top: 20px;
+}
+
+.product-info label {
+    display: block;
+    margin: 5px 0;
+}
+
+.product-info input,
+.product-info textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}
+
+.modal-buttons button {
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+#editButton {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#disableButton {
+    background-color: #f44336;
+    color: white;
+}
+
+/* Adicionando interatividade no botão de editar */
+#editButton:focus {
+    outline: none;
+}
+
+#editButton:hover {
+    background-color: #45a049;
+}
+
+  
+#adicionarCarrinhoBtn {
+    position: absolute;
+    bottom: 20px; /* Fica 20px do fundo */
+    right: 20px; /* Fica 20px da borda direita */
+    background-color: #010101;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: "Poppins", sans-serif;
+    transition: background-color 0.3s;
+}
+
+/* Estilo para o Carrinho de Compras */
+/* Carrinho de Compras */
+#carrinho-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 550px;
+    height: 100vh; /* Limita a altura do carrinho */
+    background-color: #2F2F2F; /* Cor de fundo escura */
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    
+    overflow-x: hidden; /* Evita scroll horizontal */
+}
+
+#fecharCarrinho {
+    font-size: 24px;
+    color: #fff;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+/* Esconde os botões quando o carrinho estiver visível */
+#visualizarpedido, 
+#finalizarpedido {
+    display: block; /* Mostra os botões por padrão */
+}
+
+#carrinho-container.visible ~ #visualizarpedido,
+#carrinho-container.visible ~ #finalizarpedido {
+    display: none; /* Esconde os botões quando o carrinho estiver visível */
+}
+
+/* Contêiner de Itens no Carrinho */
+#itensCarrinho {
+    margin-bottom: 20px;
+    height: calc(100% - 180px); /* Ajusta a altura para garantir que os itens se ajustem sem ultrapassar */
+    
+}
+
+/* Estilo para os itens no carrinho */
+.item-carrinho {
+    display: flex;
+    align-items: center;
+    background-color: #333; /* Cor de fundo mais escura para os itens do carrinho */
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    
+}
+
+.item-carrinho img {
+    width: 50px; /* Imagem do produto com tamanho reduzido */
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 10px; /* Espaço entre a imagem e o texto */
+}
+
+.item-carrinho span {
+    color: #fff;
+    font-size: 14px;
+    margin-right: 10px; /* Espaço entre os elementos */
+}
+
+.item-carrinho .quantidade {
+    font-weight: 200
+;
+    color: #009933; /* Cor para destacar a quantidade */
+}
+
+.item-carrinho .preco-total {
+    font-weight: 200
+;
+    color: #00b300; /* Cor verde para destacar o preço total */
+    margin-left: auto; /* Para alinhar o preço à direita */
+}
+
+/* Estilo para o total geral e pontuação */
+.total, .pontuacao {
+    font-size: 18px;
+    font-weight: 200;
+    color: #fff;
+    margin-top: 20px;
+    text-align: right;
+    padding-top: 10px;
+    border-top: 1px solid #444; /* Linha de separação acima do total */
+    position: relative;
+    top: 35 0px;
+}
+
+/* Exibição da pontuação */
+.pontuacao {
+    color: #ffcc00; /* Cor amarela para a pontuação */
+   
+}
+
+/* Estilo para o botão de "Finalizar Compra" */
+#finalizarCarrinho{
+font-size: 16px;
+background-color: #000000;
+color: #ffffff;
+border-radius: 35px;
+padding: 10px 20px;
+width: 200px;
+margin-top: 120px;
+margin-left: 325px;
+text-align: center;
+display: flex;
+justify-content: center;
+align-items: center;
+cursor: pointer;
+text-decoration: none;
+border: none;
+}
+
+.finalizarCarrinho a:hover {
+background-color: #444;
+}
+
+
+
+.produtocontainer {
+    margin: 20px; /* Espaçamento geral do container */
+}
+
+.searchprodutos {
+    display: flex; /* Alinha os elementos horizontalmente */
+    justify-content: flex-end; /* Posiciona no canto direito */
+    align-items: center; /* Alinha verticalmente */
+    position: fixed; /* Fixa no canto superior */
+    top: 20px; /* Distância do topo */
+    right: 20px; /* Distância da borda direita */
+    z-index: 1000; /* Garantir que fique acima de outros elementos */
+    gap: 10px; /* Espaçamento entre input e botão */
+}
+
+.input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-container input[type="search"] {
+    padding: 10px 35px 10px 10px; /* Espaçamento interno do input */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 250px; /* Largura do campo de busca */
+}
+
+.input-container .search-icon {
+    position: absolute;
+    right: 10px; /* Ajusta a posição da lupa */
+    color: #888; /* Cor da lupa */
+    font-size: 18px;
+    pointer-events: none; /* Desativa interações na lupa */
+}
+
+.searchprodutos button {
+    background-color: #2F2F2F;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.searchprodutos button:hover {
+    background-color: #444;
+}
+
+
+.carrinho-visivel {
+    display: block;
+}
+.carrinho-invisivel {
+    display: none;
+}
+
+#fechar-modal {
+    background-color: #f44336; /* Cor vermelha */
+}
+
+#fechar-modal:hover {
+    background-color: #e53935; /* Cor vermelha mais escura */
+}
+
+/* Estilo para os botões específicos dentro do modal */
+#add-prato, #add-ingrediente {
+    background-color: #2196F3; /* Cor de fundo azul */
+    margin: 10px;
+}
+
+#add-prato:hover, #add-ingrediente:hover {
+    background-color: #1976D2; /* Cor mais escura de azul ao passar o mouse */
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    gap: 20px;
+    
+  
+
+}
+#editar-produto, #inativar-produto{
+background-color: rgba(31, 30, 30, 0.82);
+border: none;
+height: 55px;
+width: 115px;
+border-radius: 35px;
+    color: white;
+}
+
+/* Container da Barra de Busca no canto superior direito */
+.search-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+/* Campo de Busca */
+.search-input {
+    width: 250px;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    border-bottom: 2px solid #ccc;
+    margin-right: 10px;
+}
+
+/* Estilo do Botão Adicionar */
+.add-button {
+    background-color: #2F2F2F;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilo do ícone de lupa */
+.search-container svg {
+    width: 16px;
+    height: 16px;
+    color: #2F2F2F;  /* Cor do ícone */
+    margin: 0 10px; /* Espaçamento entre o ícone e o input/botão */
+}
+
+.add-button:hover {
+    background-color: #555;
+}
+
+/* Foco nos Campos */
+.search-input:focus {
+    border-bottom: 2px solid #007BFF;
+}
+
+.add-button:focus {
+    outline: none;
+}
+
+
+::placeholder{
+    color: white;
+}

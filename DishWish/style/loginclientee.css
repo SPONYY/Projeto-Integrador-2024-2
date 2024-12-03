@@ -48,8 +48,8 @@ input[type="submit"] {
     background-color: #D9D9D9;
     position: relative; /* Para manipular a posição do ícone de calendário */
     margin-bottom: 15px;  /* Adiciona espaçamento entre os inputs */
+    
 }
-
 input[type="submit"] {
     background-color: #FFD966; /* Cor dourada para o botão */
     color: black;
@@ -57,6 +57,8 @@ input[type="submit"] {
     width: 450px; /* Largura igual ao campo de texto */
     border-radius: 30px;
     height: 45px; /* Mesma altura do campo de texto */
+    border: none;
+
 }
 
 input[type="submit"]:hover {

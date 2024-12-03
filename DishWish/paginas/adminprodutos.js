@@ -52,17 +52,14 @@ document.addEventListener('DOMContentLoaded', function () {
     };
 
     // Função para fechar o modal de editar
-    const fecharModalEditar = document.getElementById('fecharModalEditar');
-    if (fecharModalEditar) {
-        fecharModalEditar.addEventListener('click', function () {
-            document.getElementById('modal-editar').style.display = 'none';
-        });
-    }
+    document.getElementById('fecharModalEditar').addEventListener('click', function () {
+        document.getElementById('modal-editar').style.display = 'none';
+    });
 
     // Função para abrir o modal de edição de produto
     function abrirModalEditar(id) {
         const produto = produtos[id];
-        
+
         // Verifique se o modal e a imagem existem
         const imagem = document.getElementById('editar-imagem');
         if (imagem) {
@@ -153,38 +150,37 @@ document.addEventListener('DOMContentLoaded', function () {
     // Inicializa a página com os cards de produtos (caso já existam produtos)
     atualizarCards();
 
-    // Adiciona os eventos de edição e inativação fora da função abrirModalEditar
-    const editarProdutoButton = document.getElementById('editar-produto');
-    const inativarProdutoButton = document.getElementById('inativar-produto');
+    // Adicionar eventos de edição e inativação fora da função abrirModalEditar
+    document.getElementById('editar-produto').addEventListener('click', () => {
+        const id = document.querySelector('.produtocard.active').dataset.id;
+        editarProduto(id);
+    });
 
-    if (editarProdutoButton) {
-        editarProdutoButton.addEventListener('click', () => {
-            const id = document.querySelector('.produtocard.active').dataset.id;
-            editarProduto(id);
-        });
-    }
+    document.getElementById('inativar-produto').addEventListener('click', () => {
+        const id = document.querySelector('.produtocard.active').dataset.id;
+        inativarProduto(id);
+    });
 
-    if (inativarProdutoButton) {
-        inativarProdutoButton.addEventListener('click', () => {
-            const id = document.querySelector('.produtocard.active').dataset.id;
-            inativarProduto(id);
-        });
-    }
+    // Abrir o modal de adicionar ao clicar no botão "Adicionar"
+    document.getElementById('add-button').addEventListener('click', function () {
+        document.getElementById('modal-overlay').style.display = 'flex';
+    });
 
-    // Modal Adicionar
-    const addButton = document.getElementById('add-button');
-    const modalOverlay = document.getElementById('modal-overlay');
-    const closeButton = document.getElementById('close-button');
+    // Fechar o modal "Adicionar" quando clicar no botão "Fechar"
+    document.getElementById('close-button').addEventListener('click', function () {
+        document.getElementById('modal-overlay').style.display = 'none';
+    });
 
-    if (addButton && modalOverlay) {
-        addButton.addEventListener('click', () => {
-            modalOverlay.style.display = 'flex'; // Exibe o modal de adicionar produto
-        });
-    }
+    // Ações para adicionar prato ou ingrediente
+    document.getElementById('add-prato').addEventListener('click', function () {
+        alert('Você escolheu adicionar um prato!');
+        // Aqui você pode chamar a função para adicionar um prato
+        document.getElementById('modal-overlay').style.display = 'none';
+    });
 
-    if (closeButton && modalOverlay) {
-        closeButton.addEventListener('click', () => {
-            modalOverlay.style.display = 'none'; // Fecha o modal de adicionar produto
-        });
-    }
+    document.getElementById('add-ingrediente').addEventListener('click', function () {
+        alert('Você escolheu adicionar um ingrediente!');
+        // Aqui você pode chamar a função para adicionar um ingrediente
+        document.getElementById('modal-overlay').style.display = 'none';
+    });
 });

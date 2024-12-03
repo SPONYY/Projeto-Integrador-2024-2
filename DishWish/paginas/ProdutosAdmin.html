@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio - Navbar Lateral</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+   <!-- Botão Adicionar -->
+
+<!-- Modal Overlay -->
+<div class="modal-overlay" id="modal-overlay">
+    <div class="modal">
+        <button class="close-button" id="close-button">&times;</button>
+        <button class="back-button">&larr;</button>
+        <p class="modal-title">Deseja adicionar um prato ou ingrediente?</p>
+        <div class="modal-buttons">
+            <button class="modal-button">Prato</button>
+            <button class="modal-button">Ingrediente</button>
+        </div>
+    </div>
+</div>
+
+<div id="modal-editar" class="modal">
+    <div class="modal-content">
+        <!-- Botão de fechar -->
+        <span id="fecharModalEditar" class="close">&times;</span>
+        <h2>Editar Produto</h2>
+        <div class="modal-body">
+            <div class="product-image">
+                <img id="editar-imagem" src="" alt="Imagem do Produto" />
+            </div>
+            <div class="product-info">
+                <label for="editar-nome">Nome do Produto:</label>
+                <input type="text" id="editar-nome" />
+
+                <label for="editar-descricao">Descrição:</label>
+                <textarea id="editar-descricao"></textarea>
+
+                <label for="editar-preco">Preço:</label>
+                <input type="number" id="editar-preco" step="0.01" />
+
+                <label for="editar-pontos">Pontos:</label>
+                <input type="number" id="editar-pontos" />
+            </div>
+            <div class="modal-buttons">
+                <button id="editar-produto">Editar Produto</button>
+                <button id="inativar-produto">Inativar Produto</button>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="search-container">
+    <input type="text" class="search-input" placeholder="Buscar produto... " id="search-bar">
+    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 32 32">
+<path d="M 19 3 C 13.488281 3 9 7.488281 9 13 C 9 15.394531 9.839844 17.589844 11.25 19.3125 L 3.28125 27.28125 L 4.71875 28.71875 L 12.6875 20.75 C 14.410156 22.160156 16.605469 23 19 23 C 24.511719 23 29 18.511719 29 13 C 29 7.488281 24.511719 3 19 3 Z M 19 5 C 23.429688 5 27 8.570313 27 13 C 27 17.429688 23.429688 21 19 21 C 14.570313 21 11 17.429688 11 13 C 11 8.570313 14.570313 5 19 5 Z"></path>
+</svg>
+
+    
+    
+<button class="add-button" id="add-button">Adicionar</button>
+    
+    <!-- Ícone de lupa entre o input e o botão -->
+   
+</div>
+
+
+<!-- Navbar -->
+<div class="navbar">
+    <div class="logo-container">
+        <a href="homepage.html"></a>
+        <img src="../img/logo.png" alt="Logo">
+        <p>Seja bem-vindo(a)</p>
+    </div>
+    <nav class="nav-links">
+        <p>Buscar Por:</p>
+        <a href="#">Prato Principal</a>
+        <a href="#">Aperitivos</a>
+        <a href="#">Bebidas</a>
+        <a href="#">Sobremesas</a>
+    </nav>
+</div>
+
+<!-- Container de Produtos -->
+<main class="produtocontainer">
+    <h1>CARDÁPIO</h1>
+    <div id="produtos-container">
+        <!-- Cards de produto serão exibidos aqui -->
+    </div>
+
+    <!-- Modal de Produto -->
+    <div id="modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span id="fecharModal" class="fechar">&times;</span>
+            <img id="modal-img" src="placeholder.jpg" alt="Produto" class="modal-img">
+            <div class="modal-info">
+                <h2 id="modal-nome" class="nome-produto">Nome do produto</h2>
+                <p id="modal-descricao" class="descricao">Sobre o produto</p>
+                <div class="detalhes">
+                    <span id="modal-preco" class="preco">R$ 29,90</span>
+                </div>
+                <div class="buttons">
+                    <button id="inativarProdutoBtn" class="btn-editar">Inativar Produto</button>
+                    <button id="editarProdutoBtn" class="btn-editar">Editar Produto</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+    <script src="adminprodutos.js"></script>
+</body>
+</html>

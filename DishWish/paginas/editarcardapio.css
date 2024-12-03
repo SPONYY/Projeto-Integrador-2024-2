@@ -7,18 +7,48 @@ body {
 }
 
 .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 250px;
-    height: 100vh; /* Altura do navegador */
-    background-color:#010101;
+    height: 100vh;
+    background-color: #010101;
     color: white;
     padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
     font-weight: 200;
-    box-sizing: border-box; /* Inclui padding no cálculo de altura */
+}
+
+/* Estilo do conteúdo da Navbar */
+.logo-container img {
+    width: 150px;
+    margin-bottom: 10px;
 }
 
 .logo-container {
     text-align: center;
     margin-bottom: 40px;
+}
+
+.nav-links p {
+    font-size: 19px;
+    margin: 0;
+    margin-bottom: 20px;
+    
+}
+
+.nav-links a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
 }
 
 button#visualizarpedido {

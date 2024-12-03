@@ -45,7 +45,7 @@ main{
     font-size: 19px;
     margin: 0;
     margin-bottom: 20px;
-    font-weight: 200;
+    
 }
 
 .nav-links a {
@@ -53,6 +53,10 @@ main{
     color: white;
     text-decoration: none;
     margin-bottom: 10px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
 }
 
 form.formularioconquistas{

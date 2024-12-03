@@ -66,13 +66,13 @@ input[type="submit"]{
     color: #fff;
     border: none;
     font-weight: 600;
-    border: 1px solid #ffffff;
 }
 
 form{
 display: flex;
 flex-direction: column;
 gap: 30px;
+border: none;
 }
 
 
@@ -88,4 +88,8 @@ main img{
     font-size: 35px;
     margin-top: 20px    ;
 
+}
+
+#cadastrarfuncionario{
+    border: none;
 }

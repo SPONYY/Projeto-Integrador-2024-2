@@ -1,76 +1,107 @@
- body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Pragati+Narrow:wght@400;700&display=swap');
 
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #333;
-            color: white;
-            padding: 10px 20px;
-        }
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    height: 100vh;
+    padding-left: 250px; /* Espaço para a navbar */
+    position: relative; /* Para permitir o posicionamento absoluto do formulário */
+}
 
-        .logo-container {
-            display: flex;
-            align-items: center;
-        }
+main {
+    font-family: "Poppins", sans-serif;
+    padding: 20px;
+}
 
-        .logo-container img {
-            height: 50px;
-            margin-right: 10px;
-        }
+/* Estilo da Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: #010101;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+    font-weight: 200;
+}
 
-        .nav-links {
-            display: flex;
-            gap: 20px;
-        }
+/* Estilo do conteúdo da Navbar */
+.logo-container img {
+    width: 150px;
+    margin-bottom: 10px;
+}
 
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-size: 16px;
-        }
+.logo-container {
+    text-align: center;
+    margin-bottom: 40px;
+}
 
-        .nav-links a:hover {
-            text-decoration: underline;
-        }
+.nav-links p {
+    font-size: 19px;
+    margin: 0;
+    margin-bottom: 20px;
+}
 
-        main {
-            padding: 20px;
-        }
+.nav-links a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
 
-        #lista-produtos {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
+.nav-links a:hover {
+    text-decoration: underline;
+}
 
-        #lista-produtos .produto {
-            background-color: white;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 10px;
-            width: calc(33.333% - 20px);
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
+.formulario {
+    position: absolute; /* Para posicionar no canto */
+    top: 20px; /* Distância do topo */
+    right: 20px; /* Distância da direita */
+    display: flex;
+    gap: 10px;
+}
 
-        #lista-produtos .produto img {
-            max-width: 100%;
-            border-bottom: 1px solid #ddd;
-            margin-bottom: 10px;
-        }
+.formulario input {
+    padding: 5px 30px 5px 10px; /* Ajusta o padding para dar espaço para o ícone */
+    font-size: 14px;
+    border: none; /* Remove a borda padrão */
+    border-bottom: 2px solid #010101; /* Adiciona uma linha embaixo do input */
+    background: transparent; /* Remove o fundo do input */
+    width: 200px; /* Definindo uma largura para o input */
+}
 
-        #lista-produtos .produto h3 {
-            margin: 0;
-            font-size: 18px;
-            color: #333;
-        }
+.formulario input:focus {
+    outline: none; /* Remove a borda de foco */
+    border-bottom-color: #00bcd4; /* Muda a cor da linha de foco */
+}
 
-        #lista-produtos .produto p {
-            margin: 5px 0;
-            color: #666;
-        }
+.formulario input::placeholder {
+    color: #888; /* Cor do placeholder */
+}
+
+.formulario button {
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Adiciona o ícone de lupa */
+.formulario input::before {
+    content: "\f002"; /* Código do ícone de lupa no Font Awesome */
+    font-family: "Font Awesome 5 Free"; /* Fonte do Font Awesome */
+    font-weight: 900; /* Define o peso para o ícone */
+    position: absolute;
+    top: 50%;
+    left: 10px; /* Posiciona o ícone dentro do input */
+    transform: translateY(-50%); /* Centraliza verticalmente */
+    color: #010101; /* Cor do ícone */
+}

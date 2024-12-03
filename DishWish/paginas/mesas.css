@@ -24,6 +24,7 @@ body {
     top: 0; /* Fica no topo */
     left: 0; /* Fica na esquerda */
     box-sizing: border-box;
+    font-weight: 200;
 }
 
 /* Conteúdo da navbar */
