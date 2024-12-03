@@ -113,9 +113,16 @@ main tr:hover {
 }
 
 .formulario button {
-    padding: 5px 10px;
-    font-size: 14px;
+    width: 100%;
+    max-width: 500px; /* Ajusta a largura do botão */
+    height: 45px; /* Altura reduzida */
+    border-radius: 30px;
+    background-color: #1F1E1E;
+    color: #fff;
+    border: none;
     cursor: pointer;
+    font-size: 14px;  /* Fonte menor */
+    margin-top: 15px; /* Menor espaço entre o botão e os campos */
 }
 
 /* Adiciona o ícone de lupa */
