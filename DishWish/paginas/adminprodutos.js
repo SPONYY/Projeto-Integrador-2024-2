@@ -51,11 +51,6 @@ document.addEventListener('DOMContentLoaded', function () {
         },
     };
 
-    // Função para fechar o modal de editar
-    document.getElementById('fecharModalEditar').addEventListener('click', function () {
-        document.getElementById('modal-editar').style.display = 'none';
-    });
-
     // Função para abrir o modal de edição de produto
     function abrirModalEditar(id) {
         const produto = produtos[id];
@@ -150,7 +145,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Inicializa a página com os cards de produtos (caso já existam produtos)
     atualizarCards();
 
-    // Adicionar eventos de edição e inativação fora da função abrirModalEditar
+    // Adiciona os eventos de edição e inativação fora da função abrirModalEditar
     document.getElementById('editar-produto').addEventListener('click', () => {
         const id = document.querySelector('.produtocard.active').dataset.id;
         editarProduto(id);
@@ -161,26 +156,41 @@ document.addEventListener('DOMContentLoaded', function () {
         inativarProduto(id);
     });
 
-    // Abrir o modal de adicionar ao clicar no botão "Adicionar"
+    // Função para fechar o modal de edição ao clicar no "X"
+    document.getElementById('fecharModalEditar').addEventListener('click', function () {
+        document.getElementById('modal-editar').style.display = 'none'; // Fecha o modal
+    });
+
+    // Adiciona os eventos de abrir e fechar o modal "Adicionar"
     document.getElementById('add-button').addEventListener('click', function () {
-        document.getElementById('modal-overlay').style.display = 'flex';
+        document.getElementById('modal-adicionar').style.display = 'flex';
     });
 
-    // Fechar o modal "Adicionar" quando clicar no botão "Fechar"
-    document.getElementById('close-button').addEventListener('click', function () {
-        document.getElementById('modal-overlay').style.display = 'none';
-    });
+    // Fechar o modal ao clicar no botão de fechar
+    const fecharModalAdicionar = document.getElementById('fechar-modal');
+    if (fecharModalAdicionar) {
+        fecharModalAdicionar.addEventListener('click', function () {
+            document.getElementById('modal-adicionar').style.display = 'none';
+        });
+    }
 
-    // Ações para adicionar prato ou ingrediente
-    document.getElementById('add-prato').addEventListener('click', function () {
-        alert('Você escolheu adicionar um prato!');
-        // Aqui você pode chamar a função para adicionar um prato
-        document.getElementById('modal-overlay').style.display = 'none';
-    });
+    // Ação para adicionar um prato
+    const addPratoButton = document.getElementById('add-prato');
+    if (addPratoButton) {
+        addPratoButton.addEventListener('click', function () {
+            alert('Você escolheu adicionar um prato!');
+            // Aqui você pode chamar a função para adicionar um prato
+            document.getElementById('modal-adicionar').style.display = 'none';
+        });
+    }
 
-    document.getElementById('add-ingrediente').addEventListener('click', function () {
-        alert('Você escolheu adicionar um ingrediente!');
-        // Aqui você pode chamar a função para adicionar um ingrediente
-        document.getElementById('modal-overlay').style.display = 'none';
-    });
+    // Ação para adicionar um ingrediente
+    const addIngredienteButton = document.getElementById('add-ingrediente');
+    if (addIngredienteButton) {
+        addIngredienteButton.addEventListener('click', function () {
+            alert('Você escolheu adicionar um ingrediente!');
+            // Aqui você pode chamar a função para adicionar um ingrediente
+            document.getElementById('modal-adicionar').style.display = 'none';
+        });
+    }
 });

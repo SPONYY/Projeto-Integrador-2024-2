@@ -7,25 +7,27 @@
     <link rel="stylesheet" href="admin.css">
 </head>
 <body>
-   <!-- Botão Adicionar -->
+  <!-- Botão de Adicionar -->
 
-<!-- Modal Overlay -->
-<div class="modal-overlay" id="modal-overlay">
-    <div class="modal">
-        <button class="close-button" id="close-button">&times;</button>
-        <button class="back-button">&larr;</button>
-        <p class="modal-title">Deseja adicionar um prato ou ingrediente?</p>
-        <div class="modal-buttons">
-            <button class="modal-button">Prato</button>
-            <button class="modal-button">Ingrediente</button>
-        </div>
+
+<!-- Modal de Adicionar -->
+<!-- Modal de Adicionar -->
+<div id="modal-adicionar" class="modal" style="display: none;">
+    <div class="modal-content">
+        <h2>Deseja adicionar um prato ou ingrediente?</h2>
+        <div class="boutoes"> 
+            <button id="add-prato" class="modal-button" onclick="window.location.href='adicionarProduto.html';">Prato</button>
+
+        <button onclick="" id="add-ingrediente" class="modal-button">Ingrediente</button>
+    </div>
+        <span id="fecharModalAdicionar" class="close">&times;</span> <!-- Alterei o ID para fecharModalAdicionar -->
     </div>
 </div>
 
+<!-- Modal de Editar -->
 <div id="modal-editar" class="modal">
     <div class="modal-content">
-        <!-- Botão de fechar -->
-        <span id="fecharModalEditar" class="close">&times;</span>
+        <span id="fecharModalEditar" class="close">&times;</span> <!-- Manter o ID original para o modal de editar -->
         <h2>Editar Produto</h2>
         <div class="modal-body">
             <div class="product-image">
@@ -46,12 +48,12 @@
             </div>
             <div class="modal-buttons">
                 <button id="editar-produto">Editar Produto</button>
-                <button id="inativar-produto">Inativar Produto</button>
-                
+                <button  id="inativar-produto">Inativar Produto</button>
             </div>
         </div>
     </div>
 </div>
+
 
 
 <div class="search-container">
@@ -62,7 +64,7 @@
 
     
     
-<button class="add-button" id="add-button">Adicionar</button>
+   <button id="add-button" class="add-button">Adicionar</button>
     
     <!-- Ícone de lupa entre o input e o botão -->
    
@@ -72,16 +74,19 @@
 <!-- Navbar -->
 <div class="navbar">
     <div class="logo-container">
-        <a href="homepage.html"></a>
         <img src="../img/logo.png" alt="Logo">
         <p>Seja bem-vindo(a)</p>
     </div>
     <nav class="nav-links">
         <p>Buscar Por:</p>
-        <a href="#">Prato Principal</a>
-        <a href="#">Aperitivos</a>
-        <a href="#">Bebidas</a>
-        <a href="#">Sobremesas</a>
+        <a href="ProdutosAdmin.html">Cardápio</a>
+        <a href="PedidosMesa.html">Pedidos</a>
+        <a href="Mesas.html">Mesas</a>
+        <a href="colaborador.html">Colaboradores</a>
+        <a href="Conquistas.html">Conquistas e Desafios</a>
+        <a href="#">Estoque</a>
+      
+        
     </nav>
 </div>
 

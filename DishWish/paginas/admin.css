@@ -179,31 +179,63 @@ h1 {
     height: 100%;
     overflow: auto;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.73) 20.76%, rgba(31, 30, 30, 0.73) 67.83%);
-
 }
 
 /* Conteúdo do modal */
 .modal-content {
-   background: linear-gradient(180deg, rgba(0, 0, 0, 0.73) 20.76%, rgba(31, 30, 30, 0.73) 67.83%);
-    color: #fff;;
-    margin: 10% auto; /* Diminuímos a margem para centralizar mais perto */
-    padding: 15px; /* Menos padding para reduzir o tamanho */
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.73) 20.76%, rgba(31, 30, 30, 0.73) 67.83%);
+    color: #fff;
+    margin: 15% auto; /* Centraliza o modal */
+    padding: 20px;
     border-radius: 8px;
-    width: 400px;
+    width: 350px; /* Largura ajustada */
     text-align: center;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    height: 800px; /* Ajusta a altura */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Para que os botões fiquem separados do conteúdo */
 }
 
-/* Botão de fechar */
+/* Container dos botões centralizados */
+.modal-buttons {
+    display: flex;
+    justify-content: center; /* Centraliza os botões horizontalmente */
+    align-items: center; /* Garante que os botões fiquem centralizados verticalmente, se necessário */
+    margin-top: 20px;
+    gap: 10px; /* Espaçamento entre os botões */
+}
+
+/* Botões do modal */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
 .close {
-    color: #aaa;
-    font-size: 24px; /* Menor tamanho para o X */
-    font-weight: bold;
     position: absolute;
-    top: 10px;
-    right: 20px;
+    top: 5px;
+    right: 10px;
+    color: #fff;
+    font-size: 30px;
     cursor: pointer;
 }
+
+/* Ajustando a altura do conteúdo do modal */
+.product-info {
+    margin-bottom: 20px; /* Espaçamento ajustado */
+}
+
 .modal-body {
     display: flex;
     flex-direction: column;
@@ -475,14 +507,22 @@ background-color: #444;
     background-color: #f44336; /* Cor vermelha */
 }
 
+.boutoes{
+   
+}
+
 #fechar-modal:hover {
     background-color: #e53935; /* Cor vermelha mais escura */
 }
 
 /* Estilo para os botões específicos dentro do modal */
 #add-prato, #add-ingrediente {
-    background-color: #2196F3; /* Cor de fundo azul */
+    background-color: #1E1E1E; /* Cor de fundo azul */
+    border: none;
     margin: 10px;
+    color: #fff;
+    width: 200px;
+    height: 50px;
 }
 
 #add-prato:hover, #add-ingrediente:hover {
