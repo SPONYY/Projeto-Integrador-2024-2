@@ -59,15 +59,17 @@
                 <div class="form-container">
                     <input type="text" id="nomeDesafio" placeholder="Insira o nome do desafio">
                     <input type="text" id="requisitoDesafio" placeholder="Insira o requisito do desafio">
-                    <input type="text" id="tipoConquistaDesafio" placeholder="Insira o tipo do desafio">
+                    <input type="text" id="tipoDesafio" placeholder="Insira o tipo do desafio">
                     <input type="number" id="quantidadePontosDesafio" placeholder="Quantidade de pontos">
                     <div class="form-buttons">
-                        <button class="form-btn" onclick="limparFormulario()">Limpar</button>
+                        <button class="form-btn" onclick="limparFormularioDesafio()">Limpar</button>
                         <button class="form-btn" onclick="adicionarDesafio()">Adicionar</button>
+
                     </div>
                 </div>
             </div>
         </div>
+        
 
         <!-- Modal de Conquista -->
         <div id="modalConquista" class="modal">
@@ -86,6 +88,7 @@
                 </div>
             </div>
         </div>
+        
     </main>
 
     <script src="modal.js"></script>

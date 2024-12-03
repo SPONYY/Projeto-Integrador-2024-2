@@ -42,11 +42,11 @@ function closeModal() {
 }
 
 // Função para limpar o formulário de desafio
-function limparFormulario() {
+function limparFormularioDesafio() {
     document.getElementById("nomeDesafio").value = "";
     document.getElementById("requisitoDesafio").value = "";
-    document.getElementById("tipoConquista").value = "";
-    document.getElementById("quantidadePontos").value = "";
+    document.getElementById("tipoDesafio").value = "";
+    document.getElementById("quantidadePontosDesafio").value = "";
 }
 
 // Função para limpar o formulário de conquista
@@ -57,22 +57,36 @@ function limparFormularioConquista() {
     document.getElementById("quantidadePontosConquista").value = "";
 }
 
-// Função para adicionar o desafio (exemplo)
+// Função para adicionar o desafio (corrigida)
 function adicionarDesafio() {
     let nomeDesafio = document.getElementById("nomeDesafio").value;
     let requisitoDesafio = document.getElementById("requisitoDesafio").value;
-    let tipoConquista = document.getElementById("tipoConquista").value;
-    let quantidadePontos = document.getElementById("quantidadePontos").value;
+    let tipoDesafio = document.getElementById("tipoDesafio").value; // Corrigido o id
+    let quantidadePontosDesafio = document.getElementById("quantidadePontosDesafio").value;
 
-    if (nomeDesafio && requisitoDesafio && tipoConquista && quantidadePontos) {
-        console.log("Desafio Adicionado:", nomeDesafio, requisitoDesafio, tipoConquista, quantidadePontos);
+    if (nomeDesafio && requisitoDesafio && tipoDesafio && quantidadePontosDesafio) {
+        const card = document.createElement("div");
+        card.className = "card";
+        card.innerHTML = `
+            <h3>Desafio: ${nomeDesafio}</h3>
+            <p>Requisito: ${requisitoDesafio}</p>
+            <p>Tipo: ${tipoDesafio}</p>
+            <p>Pontos: ${quantidadePontosDesafio}</p>
+        `;
+        listaCadastros.appendChild(card);
+
+        // Esconde a mensagem de "cadastros vazios", se houver
+        mensagemVazia.style.display = "none";
+        
+        // Limpa o formulário de desafio e fecha o modal
+        limparFormularioDesafio();
         closeModal();
     } else {
         alert("Por favor, preencha todos os campos.");
     }
 }
 
-// Função para adicionar a conquista (exemplo)
+// Função para adicionar a conquista (corrigida)
 function adicionarConquista() {
     let nomeConquista = document.getElementById("nomeConquista").value;
     let requisitoConquista = document.getElementById("requisitoConquista").value;
@@ -80,81 +94,23 @@ function adicionarConquista() {
     let quantidadePontosConquista = document.getElementById("quantidadePontosConquista").value;
 
     if (nomeConquista && requisitoConquista && tipoConquista && quantidadePontosConquista) {
-        console.log("Conquista Adicionada:", nomeConquista, requisitoConquista, tipoConquista, quantidadePontosConquista);
+        const card = document.createElement("div");
+        card.className = "card";
+        card.innerHTML = `
+            <h3>Conquista: ${nomeConquista}</h3>
+            <p>Requisito: ${requisitoConquista}</p>
+            <p>Tipo: ${tipoConquista}</p>
+            <p>Pontos: ${quantidadePontosConquista}</p>
+        `;
+        listaCadastros.appendChild(card);
+
+        // Esconde a mensagem de "cadastros vazios", se houver
+        mensagemVazia.style.display = "none";
+        
+        // Limpa o formulário de conquista e fecha o modal
+        limparFormularioConquista();
         closeModal();
     } else {
         alert("Por favor, preencha todos os campos.");
     }
 }
-
-
-const listaCadastros = document.getElementById("listaCadastros");
-        const mensagemVazia = document.getElementById("mensagemVazia");
-
-        function adicionarDesafio() {
-            const nome = document.getElementById("nomeDesafio").value;
-            const requisito = document.getElementById("requisitoDesafio").value;
-            const tipo = document.getElementById("tipoConquista").value;
-            const pontos = document.getElementById("quantidadePontos").value;
-
-            if (nome && requisito && tipo && pontos) {
-                const card = document.createElement("div");
-                card.className = "card";
-                card.innerHTML = `
-                    <h3>Desafio: ${nome}</h3>
-                    <p>Requisito: ${requisito}</p>
-                    <p>Tipo: ${tipo}</p>
-                    <p>Pontos: ${pontos}</p>
-                `;
-                listaCadastros.appendChild(card);
-                mensagemVazia.style.display = "none";
-                closeModal();
-            }
-        }
-
-        function adicionarConquista() {
-            const nome = document.getElementById("nomeConquista").value;
-            const requisito = document.getElementById("requisitoConquista").value;
-            const tipo = document.getElementById("tipoConquista").value;
-            const pontos = document.getElementById("quantidadePontosConquista").value;
-
-            if (nome && requisito && tipo && pontos) {
-                const card = document.createElement("div");
-                card.className = "card";
-                card.innerHTML = `
-                    <h3>Conquista: ${nome}</h3>
-                    <p>Requisito: ${requisito}</p>
-                    <p>Tipo: ${tipo}</p>
-                    <p>Pontos: ${pontos}</p>
-                `;
-                listaCadastros.appendChild(card);
-                mensagemVazia.style.display = "none";
-                closeModal();
-            }
-        }
-
-        function limparFormulario() {
-            document.getElementById("nomeDesafio").value = "";
-            document.getElementById("requisitoDesafio").value = "";
-            document.getElementById("tipoConquista").value = "";
-            document.getElementById("quantidadePontos").value = "";
-        }
-
-        function limparFormularioConquista() {
-            document.getElementById("nomeConquista").value = "";
-            document.getElementById("requisitoConquista").value = "";
-            document.getElementById("tipoConquista").value = "";
-            document.getElementById("quantidadePontosConquista").value = "";
-        }
-
-        function closeModal() {
-            document.querySelectorAll(".modal").forEach(modal => modal.style.display = "none");
-        }
-
-        document.getElementById("openModal").onclick = () => {
-            document.getElementById("myModal").style.display = "flex";
-        };
-
-        document.querySelectorAll(".close").forEach(button => {
-            button.onclick = closeModal;
-        });

@@ -105,3 +105,13 @@ main {
     transform: translateY(-50%); /* Centraliza verticalmente */
     color: #010101; /* Cor do ícone */
 }
+
+button{
+    height: 45px;
+    font-family: "Poppins", sans-serif;
+    background-color: rgba(42, 41, 41, 1);
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    width: 105px;
+}

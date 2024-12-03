@@ -12,6 +12,7 @@ body {
     height: 100vh;
     padding-left: 250px; /* Espaço para a navbar */
     position: relative; /* Para permitir o posicionamento absoluto do formulário */
+    overflow: hidden;
 }
 
 main {
@@ -64,3 +65,22 @@ main {
 .nav-links a:hover {
     text-decoration: underline;
 }
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px;
+  }
+  th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+  th {
+    background-color: #f4f4f4;
+  }
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  tr:hover {
+    background-color: #eaeaea;
+  }
