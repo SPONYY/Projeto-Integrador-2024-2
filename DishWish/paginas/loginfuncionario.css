@@ -42,19 +42,18 @@ input{
 }
 
 input[type="text"]{
-width: 550px;
-height: 40px;
+width: 400px;
+height: 48px;
 border-radius: 35px;
 text-indent: 20px; 
-height: 55px;
+
 
 }
 input[type="password"]{
-width: 550px;
-height: 40px;
+width: 400px;
+height: 48px;
 border-radius: 35px;
-text-indent: 20px; 
-height: 55px;
+text-indent: 20px;
 
 }
 input[type="submit"]{
