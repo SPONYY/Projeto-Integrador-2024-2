@@ -109,19 +109,7 @@ form.formularioconquistas{
     right: 20px; /* Distância da direita */
 }
 
-.conquistassearch input[type="search"] {
-    width: 250px;
-    padding: 10px;
-    border: none;
-    border-bottom: 2px solid #ccc;
-    background-color: transparent;
-    font-size: 14px;
-    outline: none;
-}
 
-.conquistassearch input[type="search"]:focus {
-    border-bottom: 2px solid #333;
-}
 
 .conquistassearch button {
     padding: 10px 20px;
