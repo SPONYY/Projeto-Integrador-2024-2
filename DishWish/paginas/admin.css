@@ -188,14 +188,15 @@ h1 {
     margin: 15% auto; /* Centraliza o modal */
     padding: 20px;
     border-radius: 8px;
-    width: 350px; /* Largura ajustada */
+    width: fit-content; /* Ajusta a largura ao conteúdo */
+    height: fit-content; /* Ajusta a altura ao conteúdo */
     text-align: center;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    height: 800px; /* Ajusta a altura */
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Para que os botões fiquem separados do conteúdo */
+    justify-content: center;
 }
+
 
 /* Container dos botões centralizados */
 .modal-buttons {
