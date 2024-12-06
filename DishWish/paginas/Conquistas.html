@@ -22,51 +22,49 @@
                 <a href="colaborador.html">Colaboradores</a>
                 <a href="Conquistas.html">Conquistas e Desafios</a>
                 <a href="Estoque.html">Estoque</a>
-
             </nav>
         </div>
 
         <!-- Conteúdo Principal -->
         <div class="content">
-            <form class="formularioconquistas">
-                <h1>Conquistas e Desafios</h1>
-                <div class="conquistassearch">
-                    <button type="button" id="openModal">Adicionar</button>
-                </div>
-            </form>
-            
-            <div class="lista" id="listaCadastros"></div>
+            <h1>Conquistas e Desafios</h1>
+            <div class="button-container">
+                <button type="button" id="openModal">Adicionar</button>
+            </div>
+            <div class="table-container">
+                <h2>Conquistas</h2>
+                <table id="conquistasTabela">
+                    <thead>
+                        <tr>
+                            <th>Nome da Conquista</th>
+                            <th>Requisito</th>
+                            <th>Tipo</th>
+                            <th>Quantidade de Pontos</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Linhas dinâmicas serão adicionadas aqui -->
+                    </tbody>
+                </table>
+
+                <h2>Desafios</h2>
+                <table id="desafiosTabela">
+                    <thead>
+                        <tr>
+                            <th>Nome do Desafio</th>
+                            <th>Requisito</th>
+                            <th>Tipo</th>
+                            <th>Quantidade de Pontos</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Linhas dinâmicas serão adicionadas aqui -->
+                    </tbody>
+                </table>
+            </div>
         </div>
-
-        <table id="conquistasTabela">
-            <thead>
-                <tr>
-                    <th>Nome da Conquista</th>
-                    <th>Requisito</th>
-                    <th>Tipo</th>
-                    <th>Quantidade de Pontos</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Linhas dinâmicas serão adicionadas aqui -->
-            </tbody>
-        </table>
-
-        <table id="desafiosTabela">
-            <thead>
-                <tr>
-                    <th>Nome do Desafio</th>
-                    <th>Requisito</th>
-                    <th>Tipo</th>
-                    <th>Quantidade de Pontos</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Linhas dinâmicas serão adicionadas aqui -->
-            </tbody>
-        </table>
-    
-    
 
         <!-- Modal Principal -->
         <div id="myModal" class="modal">
