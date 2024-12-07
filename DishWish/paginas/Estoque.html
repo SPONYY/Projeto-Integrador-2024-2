@@ -29,8 +29,7 @@
         <div class="content">
             <form class="formularioestoque">
                 <h1>Estoque</h1>
-                    <button type="button" id="openModal">Adicionar Ingrediente</button>
-                </div>
+                <button type="button" id="openModal" class="form-btn">Adicionar Ingrediente</button>
             </form>
             
             <div class="lista" id="listaEstoque"></div>
@@ -57,9 +56,9 @@
                 <span class="close">&times;</span>
                 <h3>Adicionar novo ingrediente</h3>
                 <div class="form-container">
-                    <input type="text" id="nomeIngrediente" placeholder="Insira o nome do ingrediente">
-                    <input type="text" id="categoriaIngrediente" placeholder="Insira a categoria do ingrediente">
-                    <input type="text" id="quantidadeIngrediente" placeholder="Quantidade em estoque">
+                    <input type="text" id="nomeIngrediente" class="input-field" placeholder="Insira o nome do ingrediente">
+                    <input type="text" id="categoriaIngrediente" class="input-field" placeholder="Insira a categoria do ingrediente">
+                    <input type="text" id="quantidadeIngrediente" class="input-field" placeholder="Quantidade em estoque">
                     <div class="form-buttons">
                         <button class="form-btn" onclick="limparFormularioIngrediente()">Limpar</button>
                         <button class="form-btn" onclick="adicionarIngrediente()">Adicionar</button>
