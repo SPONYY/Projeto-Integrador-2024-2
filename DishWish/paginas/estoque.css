@@ -9,15 +9,18 @@ body {
     align-items: flex-start;
     font-family: "Poppins", sans-serif;
     margin: 0;
-    height: 100vh;
     padding-left: 250px; /* Espaço para a navbar */
-    position: relative; /* Para permitir o posicionamento absoluto do formulário */
+    position: relative;
     overflow: hidden;
 }
 
 main {
     font-family: "Poppins", sans-serif;
     padding: 20px;
+}
+
+h1 {
+  font-size: 44px;
 }
 
 /* Estilo da Navbar */
@@ -52,7 +55,6 @@ main {
     font-size: 19px;
     margin: 0;
     margin-bottom: 20px;
-    
 }
 
 .nav-links a {
@@ -65,22 +67,123 @@ main {
 .nav-links a:hover {
     text-decoration: underline;
 }
+
+/* Estilos para a Tabela */
 table {
     width: 100%;
     border-collapse: collapse;
     margin: 20px;
-  }
-  th, td {
+}
+th, td {
     padding: 12px;
     text-align: left;
     border: 1px solid #ddd;
-  }
-  th {
+}
+th {
     background-color: #f4f4f4;
-  }
-  tr:nth-child(even) {
+}
+tr:nth-child(even) {
     background-color: #f9f9f9;
-  }
-  tr:hover {
+}
+tr:hover {
     background-color: #eaeaea;
-  }
+}
+
+/* Estilo para os botões */
+.form-btn {
+  background-color: #000;  /* Fundo preto */
+  color: #fff;             /* Letra branca */
+  padding: 10px 20px;      /* Espaçamento interno */
+  border: none;            /* Remover borda */
+  border-radius: 25px;     /* Arredondar os cantos */
+  font-size: 16px;         /* Tamanho da fonte */
+  cursor: pointer;        /* Cursor de mão ao passar o mouse */
+  transition: background-color 0.3s;  /* Transição suave para a cor de fundo */
+  margin-right: 10px;      /* Espaço entre os botões */
+}
+
+.form-btn:hover {
+  background-color: #333;  /* Muda a cor do fundo quando o mouse passa em cima */
+}
+
+/* Estilo para os inputs */
+.input-field {
+    width: 100%; /* Garante que os inputs ocupem 100% da largura disponível */
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box; /* Garante que o padding e borda não saiam da área do input */
+}
+
+.input-field:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Estilo do botão Adicionar no canto superior direito */
+#openModal {
+  background-color: #000;  /* Fundo preto */
+  color: #fff;             /* Letra branca */
+  padding: 10px 20px;      /* Espaçamento interno */
+  border: none;            /* Remover borda */
+  border-radius: 25px;     /* Arredondar os cantos */
+  font-size: 16px;         /* Tamanho da fonte */
+  cursor: pointer;        /* Cursor de mão ao passar o mouse */
+  transition: background-color 0.3s;  /* Transição suave para a cor de fundo */
+  position: fixed;         /* Fixa o botão em relação à janela */
+  top: 20px;               /* Distância do topo */
+  right: 20px;             /* Distância da borda direita */
+  z-index: 100;            /* Garante que o botão ficará sobre outros elementos */
+}
+
+#openModal:hover {
+  background-color: #333;  /* Muda a cor do fundo quando o mouse passa em cima */
+}
+
+/* Estilo para o Modal */
+.modal {
+  display: none; /* Esconde o modal por padrão */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 30px; /* Aumentando o padding */
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra mais suave */
+  border-radius: 8px; /* Bordas arredondadas */
+  max-width: 400px; /* Definindo uma largura máxima para o modal */
+  width: 100%; /* Faz com que o modal ocupe 100% da largura até o limite de max-width */
+  box-sizing: border-box; /* Garante que o padding seja incluído no cálculo da largura */
+  overflow: auto; /* Adiciona rolagem caso o conteúdo ultrapasse o limite */
+}
+
+/* Conteúdo do Modal */
+.modal-content {
+  background-color: white;
+  padding: 20px; /* Adicionando mais padding para espaçamento */
+  border-radius: 8px; /* Bordas arredondadas */
+  width: 100%; /* Garante que o conteúdo do modal ocupe a largura disponível */
+  text-align: left; /* Alinhando o conteúdo à esquerda */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil para o conteúdo */
+  box-sizing: border-box; /* Garante que o padding seja incluído no cálculo da largura */
+  max-height: 80vh; /* Limita a altura do conteúdo do modal */
+  overflow-y: auto; /* Adiciona rolagem vertical caso o conteúdo seja maior que a altura disponível */
+}
+
+/* Estilo do botão Fechar */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 22px; /* Aumenta o tamanho da fonte */
+  color: #888;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #000; /* Cor ao passar o mouse */
+}
+
