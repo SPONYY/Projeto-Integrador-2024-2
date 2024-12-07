@@ -19,6 +19,10 @@ main {
     padding: 20px;
 }
 
+h1 {
+  font-size: 44px;
+}
+
 /* Estilo da Navbar */
 .navbar {
     position: fixed;

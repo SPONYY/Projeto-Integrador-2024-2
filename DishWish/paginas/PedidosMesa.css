@@ -16,6 +16,9 @@ body {
     overflow-x: hidden; /* Remove o scroll horizontal no navegador */
 }
 
+h1 {
+    font-size: 44px;
+}
 /* Navbar fixa */
 /* Estilo da Navbar */
 .navbar {
@@ -113,8 +116,7 @@ body {
 /* Estilo do número */
 .container .number {
     font-size: 72px;
-    font-weight: 200
-;
+    font-weight: 200;
 }
 
 /* Estilo da informação */
