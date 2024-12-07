@@ -26,11 +26,7 @@
     <main>
         <div class="content">
             <h1>Colaborador</h1>
-            <form class="formulario">
-                
-                    <button type="button">Cadastrar</button>
-                </a>
-            </form>
+            <button id="btnCadastrar">Cadastrar</button>
             
             <div class="dados-colaborador">
                 <h2>Lista de Colaboradores</h2>
@@ -41,11 +37,12 @@
                             <th>CPF</th>
                             <th>Telefone</th>
                             <th>Cargo</th>
+                            <th>Deletar</th>
                         </tr>
                     </thead>
                     <tbody id="tabela-corpo">
                         <tr>
-                            <td colspan="4">Nenhum colaborador cadastrado</td>
+                            <td colspan="4">Carregando dados...</td>
                         </tr>
                     </tbody>
                 </table>
@@ -54,43 +51,72 @@
     </main>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const dadosFuncionario = JSON.parse(localStorage.getItem("dadosFuncionario"));
-            const tabelaCorpo = document.getElementById("tabela-corpo");
+      // Carregar dados no localStorage e atualizar tabela
+      document.addEventListener("DOMContentLoaded", function () {
+          const tabelaCorpo = document.getElementById("tabela-corpo");
 
-            if (dadosFuncionario) {
-                // Limpar a tabela caso já tenha informações no localStorage
-                tabelaCorpo.innerHTML = "";
+          // Obter dados do localStorage
+          const dadosFuncionarios = JSON.parse(localStorage.getItem("dadosFuncionarios")) || [];
 
-                // Criar uma nova linha com as informações do localStorage
-                const tr = document.createElement("tr");
+          // Limpar tabela
+          tabelaCorpo.innerHTML = "";
 
-                const tdNome = document.createElement("td");
-                tdNome.innerText = dadosFuncionario.nome;
-                tr.appendChild(tdNome);
+          if (dadosFuncionarios.length > 0) {
+              dadosFuncionarios.forEach((dado, index) => {
+                  const tr = document.createElement("tr");
 
-                const tdCpf = document.createElement("td");
-                tdCpf.innerText = dadosFuncionario.cpf;
-                tr.appendChild(tdCpf);
+                  const tdNome = document.createElement("td");
+                  tdNome.innerText = dado.nome;
+                  tr.appendChild(tdNome);
 
-                const tdTelefone = document.createElement("td");
-                tdTelefone.innerText = dadosFuncionario.telefone;
-                tr.appendChild(tdTelefone);
+                  const tdCpf = document.createElement("td");
+                  tdCpf.innerText = dado.cpf;
+                  tr.appendChild(tdCpf);
 
-                const tdCargo = document.createElement("td");
-                tdCargo.innerText = dadosFuncionario.cargo;
-                tr.appendChild(tdCargo);
+                  const tdTelefone = document.createElement("td");
+                  tdTelefone.innerText = dado.telefone;
+                  tr.appendChild(tdTelefone);
 
-                tabelaCorpo.appendChild(tr);
-            } else {
-                const tr = document.createElement("tr");
-                const tdMensagem = document.createElement("td");
-                tdMensagem.setAttribute("colspan", 4);
-                tdMensagem.innerText = "Nenhum colaborador cadastrado";
-                tr.appendChild(tdMensagem);
-                tabelaCorpo.appendChild(tr);
-            }
-        });
-    </script>
+                  const tdCargo = document.createElement("td");
+                  tdCargo.innerText = dado.cargo;
+                  tr.appendChild(tdCargo);
+
+                  const tdAcoes = document.createElement("td"); // Coluna de ações
+                  const btnDeletar = document.createElement("button");
+                  btnDeletar.innerText = "Excluir";
+                  btnDeletar.classList.add("deletar-btn");
+
+                  // Adicionando evento para deletar ao clicar
+                  btnDeletar.addEventListener("click", function () {
+                      deletarFuncionario(index);
+                  });
+
+                  tdAcoes.appendChild(btnDeletar);
+                  tr.appendChild(tdAcoes);
+
+                  tabelaCorpo.appendChild(tr);
+              });
+          } else {
+              const tr = document.createElement("tr");
+              const tdMensagem = document.createElement("td");
+              tdMensagem.setAttribute("colspan", 5);
+              tdMensagem.innerText = "Nenhum colaborador cadastrado";
+              tr.appendChild(tdMensagem);
+              tabelaCorpo.appendChild(tr);
+          }
+
+          document.getElementById("btnCadastrar").addEventListener("click", function () {
+              window.location.href = "cadastrarfuncionario.html";
+          });
+      });
+
+      // Função para deletar um colaborador
+      function deletarFuncionario(index) {
+          const dadosFuncionarios = JSON.parse(localStorage.getItem("dadosFuncionarios")) || [];
+          dadosFuncionarios.splice(index, 1); // Remove o elemento pelo índice
+          localStorage.setItem("dadosFuncionarios", JSON.stringify(dadosFuncionarios)); // Atualiza no localStorage
+          location.reload(); // Recarrega a página para atualizar a tabela
+      }
+  </script>
 </body>
 </html>

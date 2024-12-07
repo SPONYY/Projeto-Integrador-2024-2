@@ -41,9 +41,32 @@ main th {
 main tr:nth-child(even) {
     background-color: #f9f9f9;
 }
+.deletar-btn{
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
 
+    padding: 8px 15px;
+}
 main tr:hover {
     background-color: #eaeaea;
+}
+/* Posicionando o botão no canto superior direito */
+#btnCadastrar {
+    position: fixed; /* Fixa o botão na posição da tela */
+    top: 20px; /* Distância do topo */
+    right: 20px; /* Distância da direita */
+    padding: 8px 15px;
+    background-color: #1F1E1E;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    z-index: 100; /* Garante que ele fique sobre outros elementos */
 }
 
 /* Estilo da Navbar */
@@ -68,6 +91,7 @@ main tr:hover {
     width: 150px;
     margin-bottom: 10px;
 }
+
 
 .logo-container {
     text-align: center;

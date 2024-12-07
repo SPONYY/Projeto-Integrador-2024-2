@@ -8,7 +8,7 @@
 </head>
 <body>
     <main>
-        <p>Cadastro de Funcionário</p>
+        <h1>Cadastro de Funcionário</h1>
         <form id="formCadastro">
             <input type="text" id="nome" name="nome" placeholder="Nome Completo" required>
             <input type="text" id="cpf" name="cpf" placeholder="CPF" required>
@@ -19,25 +19,26 @@
     </main>
 
     <script>
-        document.getElementById("formCadastro").addEventListener("submit", function(e) {
-            e.preventDefault(); // Impede envio do formulário
+        document.getElementById("formCadastro").addEventListener("submit", function (e) {
+            e.preventDefault();
 
-            const nome = document.getElementById("nome").value;
-            const cpf = document.getElementById("cpf").value;
-            const telefone = document.getElementById("telefone").value;
-            const cargo = document.getElementById("cargo").value;
-
-            const dadosFuncionario = {
-                nome,
-                cpf,
-                telefone,
-                cargo
+            const novoFuncionario = {
+                nome: document.getElementById("nome").value,
+                cpf: document.getElementById("cpf").value,
+                telefone: document.getElementById("telefone").value,
+                cargo: document.getElementById("cargo").value
             };
 
-            // Armazena dados no localStorage
-            localStorage.setItem("dadosFuncionario", JSON.stringify(dadosFuncionario));
+            // Obter dados antigos do localStorage ou criar um array vazio
+            const dadosFuncionarios = JSON.parse(localStorage.getItem("dadosFuncionarios")) || [];
 
-            // Redireciona para a página de colaboradores
+            // Adicionar novo funcionário ao array
+            dadosFuncionarios.push(novoFuncionario);
+
+            // Salvar no localStorage
+            localStorage.setItem("dadosFuncionarios", JSON.stringify(dadosFuncionarios));
+
+            alert("Funcionário cadastrado com sucesso!");
             window.location.href = "colaborador.html";
         });
     </script>
