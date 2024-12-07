@@ -3,23 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário de Cadastro</title>
+    <title>Cadastro Simplificado</title>
     <link rel="stylesheet" href="cadastrarfuncionario.css">
 </head>
 <body>
     <main>
-        <p>Dados pessoais</p>
-        <form id="formCadastro" action="enderecoFuncionario.html">
-            <input type="text" id="id" name="id" placeholder="ID" required>
+        <p>Cadastro de Funcionário</p>
+        <form id="formCadastro" action="colaborador.html">
             <input type="text" id="nome" name="nome" placeholder="Nome Completo" required>
             <input type="text" id="cpf" name="cpf" placeholder="CPF" required>
-            <input type="date" id="data_nascimento" name="data_nascimento" required>
             <input type="tel" id="telefone" name="telefone" placeholder="Telefone" required>
-            <input type="email" id="email" name="email" placeholder="E-mail" required>
-            <input type="text" id="rg" name="rg" placeholder="RG" required>
-            <input type="text" id="num_carteira_trabalho" name="num_carteira_trabalho" placeholder="Número da Carteira de Trabalho" required>
-            <input type="text" id="pis" name="pis" placeholder="PIS/PASEP" required>
-            <button type="submit">Próximo</button>
+            <input type="text" id="cargo" name="cargo" placeholder="Cargo" required>
+            <button type="submit">Cadastrar</button>
         </form>
     </main>
 </body>
