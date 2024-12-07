@@ -1,42 +1,42 @@
 // Dados dos produtos
 const produtos = {
     "1": {
-        "img": '../img/image5.png',
+        "img": '../img/hamb.png',
         "nome": "Hamburguer",   
         "descricao": "Carne e pão",
         "preco": 10.00,
         "pontos": 50
     },
     "2": {
-        "img": '../img/image5.png',
+        "img": '../img/Batata_Frita_PNG_Transparente_Sem_Fundo.png',
         "nome": "Batata Frita",
         "descricao": "Batata e sal",
         "preco": 5.00,
         "pontos": 35
     },
     "3": {
-        "img": '../img/image5.png',
+        "img": '../img/salada.png',
         "nome": "Salada",
         "descricao": "Salada de Alface",
         "preco": 3.00,
         "pontos": 15
     },
     "4": {
-        "img": '../img/image5.png',
+        "img": '../img/suco.png',
         "nome": "Suco Natural",
         "descricao": "Suco de laranja",
         "preco": 12.00,
         "pontos": 5
     },
     "5": {
-        "img": '../img/image5.png',
+        "img": '../img/cha.png',
         "nome": "Chá Gelado",
         "descricao": "Chá Mate",
         "preco": 10.00,
         "pontos": 10
     },
     "6": {
-        "img": '../img/image5.png',
+        "img": '../img/refri.png',
         "nome": "Refrigerante",
         "descricao": "Refrigerante e gelo",
         "preco": 3.00,

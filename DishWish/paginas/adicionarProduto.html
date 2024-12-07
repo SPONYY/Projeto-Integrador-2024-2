@@ -1,34 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="produtocadastrar.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Prato</title>
+  <style>
+    /* Estilização básica para o formulário */
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .form-container {
+      max-width: 500px;
+      margin: 50px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    form input,
+    form select {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: 1px solid #aaa;
+      border-radius: 4px;
+    }
+
+    .form-button {
+      margin: 10px 0;
+      padding: 10px 20px;
+      border: none;
+      background-color: #007bff;
+      color: white;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+
+    .form-button:hover {
+      background-color: #0056b3;
+    }
+  </style>
 </head>
 <body>
-    <div class="form-container">
+  <div class="form-container">
+    <h1>Cadastro de Prato</h1>
+    <form id="formulario">
+      <input type="text" placeholder="Nome do Prato" required>
+      <select name="categoriaprato" id="categoriaprato">
+        <option value="Entrada">Entrada</option>
+        <option value="Prato Principal">Prato Principal</option>
+        <option value="Sobremesa">Sobremesa</option>
+        <option value="Bebida">Bebida</option>
+      </select>
+      <input type="text" placeholder="Descrição do Prato" required>
+      <input type="text" placeholder="Tempo de preparo (minutos)" required>
+      <input type="text" placeholder="Custo total de ingredientes" required>
+      <input type="text" placeholder="Preço Unitário" required>
+      <input type="text" placeholder="Observações" required>
+      <button type="submit" class="form-button">Gravar</button>
+      <button type="reset" class="form-button">Limpar campos</button>
+    </form>
+  </div>
 
-        <h1>Cadastro de Prato</h1>
-        <form action="adicionarProduto2.html">
-            
-            <input type="text" placeholder="Nome do Prato" required>
-            <select name="categoriaprato" id="categoriaprato">
-                <option value="Entrada">Entrada</option>
-                <option value="Prato Principal">Prato Principal</option>
-                <option value="Sobremesa">sobremesa</option>
-                <option value="Bebida">Bebida</option>
-            </select>
-            <input type="text" placeholder="Descrição do Prato" required>]
-            <input type="text" placeholder="Tempo de preparo" required>
-            <input type="text" placeholder="Custo total de ingredientes" required>
-            <input type="text" placeholder="Preço Unitário" required>
-            <input type="text" placeholder="Observações" required>
-            <button type="submit" class="form-button">Gravar</button>
-            <button type="reset" class="form-button">Limpar campos</button>
-        </form>
-    </div>
-    
-    
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+      // Função para carregar dados iniciais no LocalStorage caso esteja vazio
+      function carregarDadosIniciais() {
+        const dadosIniciais = {
+          "1": { "img": '../img/image5.png', "nome": "Hamburguer", "descricao": "Carne e pão", "preco": 10.00, "pontos": 50, "status": "Ativo" },
+          "2": { "img": '../img/image5.png', "nome": "Batata Frita", "descricao": "Batata e sal", "preco": 5.00, "pontos": 35, "status": "Ativo" },
+          "3": { "img": '../img/image5.png', "nome": "Salada", "descricao": "Salada de Alface", "preco": 3.00, "pontos": 15, "status": "Ativo" },
+          "4": { "img": '../img/image5.png', "nome": "Suco Natural", "descricao": "Suco de laranja", "preco": 12.00, "pontos": 5, "status": "Ativo" },
+          "5": { "img": '../img/image5.png', "nome": "Chá Gelado", "descricao": "Chá Mate", "preco": 10.00, "pontos": 10, "status": "Ativo" },
+          "6": { "img": '../img/image5.png', "nome": "Refrigerante", "descricao": "Refrigerante e gelo", "preco": 3.00, "pontos": 15, "status": "Ativo" },
+        };
+
+        // Verifica se localStorage já possui dados; se não, carrega dados iniciais
+        if (!localStorage.getItem('produtos')) {
+          localStorage.setItem('produtos', JSON.stringify(dadosIniciais));
+        }
+      }
+
+      // Função para salvar produtos no localStorage
+      function salvarNoLocalStorage(produtos) {
+        localStorage.setItem('produtos', JSON.stringify(produtos));
+      }
+
+      // Manipulador de envio do formulário
+      document.getElementById('formulario').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const formData = new FormData(event.target);
+
+        const novoProduto = {
+          img: '../img/image5.png',
+          nome: formData.get(0),
+          categoria: formData.get('categoriaprato'),
+          descricao: formData.get(2),
+          tempo_preparo: parseInt(formData.get(3)),
+          custo_ingredientes: parseFloat(formData.get(4)),
+          preco: parseFloat(formData.get(5)),
+          observacoes: formData.get(6),
+          status: "Ativo",
+        };
+
+        const produtos = JSON.parse(localStorage.getItem('produtos')) || {};
+
+        const id = Date.now().toString();
+        produtos[id] = novoProduto;
+
+        salvarNoLocalStorage(produtos);
+
+        alert("Prato cadastrado com sucesso!");
+        window.location.reload();
+      });
+
+      // Carrega dados iniciais no localStorage
+      carregarDadosIniciais();
+    });
+  </script>
 </body>
 </html>
