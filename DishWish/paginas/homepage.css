@@ -191,7 +191,7 @@
     }
 
     .modal-img, #modal-img {
-        width: auto;
+        width: 300px;
         object-fit: cover;
         border-radius: 10px;
     }
